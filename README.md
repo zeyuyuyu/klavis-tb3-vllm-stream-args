@@ -50,7 +50,7 @@ incremental driver for the XML format.
 | check | result |
 |---|---|
 | 22 static checks (`scripts/checks/`) | all pass — [`results/static-checks.md`](results/static-checks.md) |
-| rubric review (`claude-code` sonnet, `scripts/review/`) | 33 pass / 2 not applicable / 0 fail on the pre-final files; RUBRIC_FINAL |
+| rubric review (`claude-code` sonnet, `scripts/review/`) | 33 pass / 2 not applicable / 0 fail on the submitted files ([`results/vllm-stream-args/rubric-review-verdicts.json`](results/vllm-stream-args/rubric-review-verdicts.json)); the same verdict on three earlier revisions, with two intermediate runs each flagging one stale number that was then corrected |
 | oracle | reward 1.0, 85/85 |
 | nop | reward 0.0, 5/85 |
 | codex gpt-5.6-sol xhigh, 3 trials (task as submitted) | **fail, solved, solved** |
