@@ -1,0 +1,32 @@
+{
+  "run_id": "run-2026-06-alpha",
+  "created_at": "2026-06-03T09:00:00Z",
+  "harness_version": "tbx-runner 3.4.1",
+  "model_registry": {
+    "aurora-4-pro-2026-05-01": "aurora-4-pro",
+    "cinder-9-turbo-preview": "cinder-9-turbo"
+  },
+  "price_table": [
+    {
+      "model": "aurora-4-pro",
+      "effective_from": "2026-04-04",
+      "input_per_mtok": 4.28,
+      "cached_input_per_mtok": 0.428,
+      "output_per_mtok": 19.2
+    },
+    {
+      "model": "cinder-9-turbo",
+      "effective_from": "2026-04-04",
+      "input_per_mtok": 4.14,
+      "cached_input_per_mtok": 0.414,
+      "output_per_mtok": 18.09
+    },
+    {
+      "model": "basilisk-2",
+      "effective_from": "2026-04-04",
+      "input_per_mtok": 3.14,
+      "cached_input_per_mtok": 0.314,
+      "output_per_mtok": 12.85
+    }
+  ]
+}

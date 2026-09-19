@@ -1,0 +1,30 @@
+{
+  "run_id": "run-2026-07-gamma",
+  "shards": [
+    {
+      "shard_id": "shard-00",
+      "path": "shards/shard-00.jsonl",
+      "status": "complete"
+    },
+    {
+      "shard_id": "shard-01",
+      "path": "shards/shard-01.jsonl",
+      "status": "complete"
+    },
+    {
+      "shard_id": "shard-02",
+      "path": "shards/shard-02.jsonl",
+      "status": "complete"
+    },
+    {
+      "shard_id": "shard-03",
+      "path": "shards/shard-03.jsonl",
+      "status": "superseded"
+    },
+    {
+      "shard_id": "shard-04",
+      "path": "shards/shard-04.jsonl",
+      "status": "cancelled"
+    }
+  ]
+}

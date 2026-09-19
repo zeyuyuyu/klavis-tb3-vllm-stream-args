@@ -1,0 +1,1043 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-09-[REDACTED]9T08:[REDACTED]2:34.424267+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.[REDACTED].[REDACTED]"
+        },
+        "summary": {
+            "tests": 85,
+            "passed": 85,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": [REDACTED]789805367909,
+            "stop": [REDACTED]789805554424
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2443,
+                "start": [REDACTED]789805367994,
+                "stop": [REDACTED]789805370437,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED][REDACTED]6,
+                "start": [REDACTED]789805370437,
+                "stop": [REDACTED]789805372553,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]24,
+                "start": [REDACTED]789805372554,
+                "stop": [REDACTED]789805374678,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]49,
+                "start": [REDACTED]789805374678,
+                "stop": [REDACTED]789805376827,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]52,
+                "start": [REDACTED]789805376827,
+                "stop": [REDACTED]789805378979,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2208,
+                "start": [REDACTED]789805378979,
+                "stop": [REDACTED]78980538[REDACTED][REDACTED]87,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]78,
+                "start": [REDACTED]78980538[REDACTED][REDACTED]87,
+                "stop": [REDACTED]789805383365,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]75,
+                "start": [REDACTED]789805383366,
+                "stop": [REDACTED]78980538554[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]66,
+                "start": [REDACTED]78980538554[REDACTED],
+                "stop": [REDACTED]789805387707,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]73,
+                "start": [REDACTED]789805387707,
+                "stop": [REDACTED]789805389880,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]92,
+                "start": [REDACTED]78980538988[REDACTED],
+                "stop": [REDACTED]789805392073,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]76,
+                "start": [REDACTED]789805392074,
+                "stop": [REDACTED]789805394250,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]74,
+                "start": [REDACTED]78980539425[REDACTED],
+                "stop": [REDACTED]789805396425,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]57,
+                "start": [REDACTED]789805396426,
+                "stop": [REDACTED]789805398583,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]38,
+                "start": [REDACTED]789805398583,
+                "stop": [REDACTED]78980540072[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]3[REDACTED],
+                "start": [REDACTED]78980540072[REDACTED],
+                "stop": [REDACTED]789805402852,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]52,
+                "start": [REDACTED]789805402852,
+                "stop": [REDACTED]789805405004,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]54,
+                "start": [REDACTED]789805405005,
+                "stop": [REDACTED]789805407[REDACTED]59,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]3[REDACTED],
+                "start": [REDACTED]789805407[REDACTED]60,
+                "stop": [REDACTED]78980540929[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]72,
+                "start": [REDACTED]78980540929[REDACTED],
+                "stop": [REDACTED]7898054[REDACTED][REDACTED]463,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]38,
+                "start": [REDACTED]7898054[REDACTED][REDACTED]463,
+                "stop": [REDACTED]7898054[REDACTED]360[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]49,
+                "start": [REDACTED]7898054[REDACTED]3602,
+                "stop": [REDACTED]7898054[REDACTED]575[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]42,
+                "start": [REDACTED]7898054[REDACTED]575[REDACTED],
+                "stop": [REDACTED]7898054[REDACTED]7893,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]60,
+                "start": [REDACTED]7898054[REDACTED]7893,
+                "stop": [REDACTED]789805420053,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]74,
+                "start": [REDACTED]789805420054,
+                "stop": [REDACTED]789805422228,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]89,
+                "start": [REDACTED]789805422229,
+                "stop": [REDACTED]7898054244[REDACTED]8,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]46,
+                "start": [REDACTED]7898054244[REDACTED]9,
+                "stop": [REDACTED]789805426565,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]6[REDACTED],
+                "start": [REDACTED]789805426566,
+                "stop": [REDACTED]789805428727,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2[REDACTED]46,
+                "start": [REDACTED]789805428727,
+                "stop": [REDACTED]789805430873,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2230,
+                "start": [REDACTED]789805430873,
+                "stop": [REDACTED]789805433[REDACTED]03,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2247,
+                "start": [REDACTED]789805433[REDACTED]03,
+                "stop": [REDACTED]789805435350,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 223[REDACTED],
+                "start": [REDACTED]789805435350,
+                "stop": [REDACTED]78980543758[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2233,
+                "start": [REDACTED]789805437582,
+                "stop": [REDACTED]7898054398[REDACTED]5,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2240,
+                "start": [REDACTED]7898054398[REDACTED]5,
+                "stop": [REDACTED]789805442055,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 227[REDACTED],
+                "start": [REDACTED]789805442056,
+                "stop": [REDACTED]789805444327,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 2205,
+                "start": [REDACTED]789805444327,
+                "stop": [REDACTED]789805446532,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 22[REDACTED]7,
+                "start": [REDACTED]789805446532,
+                "stop": [REDACTED]789805448749,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]80,
+                "start": [REDACTED]789805448749,
+                "stop": [REDACTED]789805450929,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]68,
+                "start": [REDACTED]789805450929,
+                "stop": [REDACTED]789805453097,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2222,
+                "start": [REDACTED]789805453098,
+                "stop": [REDACTED]789805455320,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]43,
+                "start": [REDACTED]789805455320,
+                "stop": [REDACTED]789805457463,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]55,
+                "start": [REDACTED]789805457463,
+                "stop": [REDACTED]7898054596[REDACTED]8,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]44,
+                "start": [REDACTED]7898054596[REDACTED]8,
+                "stop": [REDACTED]78980546[REDACTED]762,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]49,
+                "start": [REDACTED]78980546[REDACTED]763,
+                "stop": [REDACTED]7898054639[REDACTED]2,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]39,
+                "start": [REDACTED]7898054639[REDACTED]2,
+                "stop": [REDACTED]78980546605[REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED][REDACTED]2,
+                "start": [REDACTED]789805466052,
+                "stop": [REDACTED]789805468[REDACTED]64,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]6[REDACTED],
+                "start": [REDACTED]789805468[REDACTED]64,
+                "stop": [REDACTED]789805470325,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]77,
+                "start": [REDACTED]789805470325,
+                "stop": [REDACTED]789805472502,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]35,
+                "start": [REDACTED]789805472503,
+                "stop": [REDACTED]789805474638,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]06,
+                "start": [REDACTED]789805474639,
+                "stop": [REDACTED]789805476745,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED][REDACTED]7,
+                "start": [REDACTED]789805476746,
+                "stop": [REDACTED]789805478863,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]48,
+                "start": [REDACTED]789805478863,
+                "stop": [REDACTED]78980548[REDACTED]0[REDACTED][REDACTED],
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]36,
+                "start": [REDACTED]78980548[REDACTED]0[REDACTED][REDACTED],
+                "stop": [REDACTED]789805483[REDACTED]47,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED][REDACTED]2,
+                "start": [REDACTED]789805483[REDACTED]47,
+                "stop": [REDACTED]789805485259,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]68,
+                "start": [REDACTED]789805485259,
+                "stop": [REDACTED]789805487427,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]29,
+                "start": [REDACTED]789805487428,
+                "stop": [REDACTED]789805489557,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]25,
+                "start": [REDACTED]789805489558,
+                "stop": [REDACTED]78980549[REDACTED]683,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]26,
+                "start": [REDACTED]78980549[REDACTED]684,
+                "stop": [REDACTED]7898054938[REDACTED]0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]27,
+                "start": [REDACTED]7898054938[REDACTED]0,
+                "stop": [REDACTED]789805495937,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]40,
+                "start": [REDACTED]789805495937,
+                "stop": [REDACTED]789805498077,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]49,
+                "start": [REDACTED]789805498077,
+                "stop": [REDACTED]789805500226,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]40,
+                "start": [REDACTED]789805500226,
+                "stop": [REDACTED]789805502366,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]58,
+                "start": [REDACTED]789805502367,
+                "stop": [REDACTED]789805504525,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]50,
+                "start": [REDACTED]789805504525,
+                "stop": [REDACTED]789805506675,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]5[REDACTED],
+                "start": [REDACTED]789805506675,
+                "stop": [REDACTED]789805508826,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]46,
+                "start": [REDACTED]789805508826,
+                "stop": [REDACTED]7898055[REDACTED]0972,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]75,
+                "start": [REDACTED]7898055[REDACTED]0972,
+                "stop": [REDACTED]7898055[REDACTED]3[REDACTED]47,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2205,
+                "start": [REDACTED]7898055[REDACTED]3[REDACTED]47,
+                "stop": [REDACTED]7898055[REDACTED]5352,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2206,
+                "start": [REDACTED]7898055[REDACTED]5352,
+                "stop": [REDACTED]7898055[REDACTED]7558,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]78,
+                "start": [REDACTED]7898055[REDACTED]7558,
+                "stop": [REDACTED]7898055[REDACTED]9736,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]94,
+                "start": [REDACTED]7898055[REDACTED]9736,
+                "stop": [REDACTED]78980552[REDACTED]930,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]93,
+                "start": [REDACTED]78980552[REDACTED]930,
+                "stop": [REDACTED]789805524[REDACTED]23,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2246,
+                "start": [REDACTED]789805524[REDACTED]24,
+                "stop": [REDACTED]789805526370,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 2[REDACTED]86,
+                "start": [REDACTED]789805526370,
+                "stop": [REDACTED]789805528556,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['internlm2_arguments_is_null', 'internlm2_arguments_key', 'internlm2_control_character_escapes', 'internlm2_number_forms', 'internlm2_parameters_after_content', 'internlm2_text_between_plugin_and_brace', 'internlm2_trailing_text_after_action_end', 'internlm2_variant_ascii_escaped', 'internlm2_variant_compact', 'internlm2_variant_handwritten', 'internlm2_variant_indented', 'internlm2_without_action_end', 'jamba_arguments_is_a_string', 'jamba_arguments_key_nested_inside_arguments', 'jamba_empty_containers_with_inner_whitespace', 'jamba_empty_values', 'jamba_escaped_keys_and_escaped_name', 'jamba_name_after_arguments', 'jamba_name_key_inside_arguments_before_call_name', 'jamba_nested_after_content', 'jamba_padded_payload_crlf', 'jamba_second_block_is_ignored_like_non_streaming', 'jamba_tag_text_inside_a_string', 'jamba_three_calls_with_extra_keys', 'jamba_two_calls_unicode', 'jamba_variant_ascii_escaped', 'jamba_variant_compact', 'jamba_variant_handwritten', 'jamba_variant_indented', 'minicpm5_after_thinking', 'minicpm5_single_call', 'minicpm5_single_quoted_attributes_and_unknown_param', 'minicpm5_tokenizer_space_glyphs', 'minicpm5_two_calls_after_content', 'minicpm5_two_functions_in_one_wrapper', 'minicpm5_typed_values_with_whitespace', 'minicpm5_without_tool_call_wrapper']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_plain_text_still_streams_as_content",
+                "status": "passed",
+                "duration": 2[REDACTED]69,
+                "start": [REDACTED]789805528556,
+                "stop": [REDACTED]789805530725,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['jamba', 'internlm2', 'minicpm5']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_plain_text_still_streams_as_content",
+                "status": "passed",
+                "duration": 2[REDACTED]36,
+                "start": [REDACTED]789805530726,
+                "stop": [REDACTED]789805532862,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['jamba', 'internlm2', 'minicpm5']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_plain_text_still_streams_as_content",
+                "status": "passed",
+                "duration": 2203,
+                "start": [REDACTED]789805532862,
+                "stop": [REDACTED]789805535065,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['jamba', 'internlm2', 'minicpm5']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call",
+                "status": "passed",
+                "duration": 2202,
+                "start": [REDACTED]789805535066,
+                "stop": [REDACTED]789805537268,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::scenario::['minicpm5_unknown_function_stays_content']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_parsers_are_still_where_vllm_loads_them",
+                "status": "passed",
+                "duration": [REDACTED],
+                "start": [REDACTED]789805537268,
+                "stop": [REDACTED]789805537269,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written",
+                "status": "passed",
+                "duration": [REDACTED][REDACTED]50,
+                "start": [REDACTED]789805537270,
+                "stop": [REDACTED]789805538420,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['internlm2', 'jamba']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written",
+                "status": "passed",
+                "duration": [REDACTED][REDACTED]66,
+                "start": [REDACTED]78980553842[REDACTED],
+                "stop": [REDACTED]789805539587,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['internlm2', 'jamba']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_xml_name_and_parameters_stream_as_they_close",
+                "status": "passed",
+                "duration": [REDACTED][REDACTED]34,
+                "start": [REDACTED]789805539588,
+                "stop": [REDACTED]789805540722,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time",
+                "status": "passed",
+                "duration": 5057,
+                "start": [REDACTED]789805540722,
+                "stop": [REDACTED]789805545779,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['jamba', 'internlm2', 'minicpm5']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time",
+                "status": "passed",
+                "duration": 5054,
+                "start": [REDACTED]789805545779,
+                "stop": [REDACTED]789805550833,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['jamba', 'internlm2', 'minicpm5']"
+                ]
+            },
+            {
+                "name": "test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time",
+                "status": "passed",
+                "duration": 3589,
+                "start": [REDACTED]789805550834,
+                "stop": [REDACTED]789805554423,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "tags": [
+                    "parametrize::kind::['jamba', 'internlm2', 'minicpm5']"
+                ]
+            }
+        ]
+    }
+}

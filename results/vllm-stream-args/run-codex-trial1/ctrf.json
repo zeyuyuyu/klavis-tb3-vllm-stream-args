@@ -1,0 +1,684 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-09-[REDACTED]9T05:28:33.9[REDACTED]984[REDACTED]+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.[REDACTED].[REDACTED]"
+        },
+        "summary": {
+            "tests": 72,
+            "passed": 65,
+            "failed": 7,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": [REDACTED]78979565[REDACTED][REDACTED]70,
+            "stop": [REDACTED]7897957[REDACTED]39[REDACTED]9
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_stream_matches_non_streaming_for_every_split",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "failed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py",
+                "trace": "privilege-dropped worker did not report success"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_plain_text_still_streams_as_content",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_plain_text_still_streams_as_content",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_plain_text_still_streams_as_content",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_parsers_are_still_where_vllm_loads_them",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_xml_name_and_parameters_stream_as_they_close",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            },
+            {
+                "name": "test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time",
+                "status": "passed",
+                "duration": 0,
+                "start": 0,
+                "stop": 0,
+                "retries": 0,
+                "file_path": "test_stream.py"
+            }
+        ]
+    }
+}

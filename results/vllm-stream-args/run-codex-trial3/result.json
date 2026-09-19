@@ -1,0 +1,130 @@
+{
+    "id": "6dd2955c-[REDACTED]540-4cec-8c28-[REDACTED]d7b65ff0bc9",
+    "task_name": "terminal-bench/vllm-stream-args",
+    "trial_name": "vllm-stream-args__v9SmNXa",
+    "trial_uri": "file:///home/zeyu/klavis-tb3/tb3/jobs/vsa-run-codex-b/vllm-stream-args__v9SmNXa",
+    "task_id": {
+        "path": "tasks/vllm-stream-args"
+    },
+    "source": null,
+    "task_checksum": "c5cd047d5c[REDACTED]9dc35b237e7dd9cc74564dd7[REDACTED]76d35603bac[REDACTED]bf0798e2bc[REDACTED]06337",
+    "config": {
+        "task": {
+            "path": "tasks/vllm-stream-args",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "vllm-stream-args__v9SmNXa",
+        "trials_dir": "jobs/vsa-run-codex-b",
+        "install_only": false,
+        "timeout_multiplier": [REDACTED].0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": 3.0,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "codex",
+            "import_path": null,
+            "model_name": "openai/gpt-5.6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "reasoning_effort": "xhigh"
+            },
+            "env": {
+                "CODEX_FORCE_AUTH_JSON": "****"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "566866[REDACTED]7-9ce2-4a95-8b9d-cc38326b2[REDACTED]5b",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "codex",
+        "version": "0.[REDACTED]55.[REDACTED]",
+        "model_info": {
+            "name": "gpt-5.6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 292[REDACTED]30[REDACTED]6,
+        "n_cache_tokens": 28973[REDACTED]84,
+        "n_output_tokens": 74752,
+        "cost_usd": [REDACTED]4.04364[REDACTED]599999999,
+        "model_usage": {
+            "openai/gpt-5.6-sol": {
+                "n_input_tokens": 292[REDACTED]30[REDACTED]6,
+                "n_cache_tokens": 28973[REDACTED]84,
+                "n_output_tokens": 74752,
+                "cost_usd": [REDACTED]4.04364[REDACTED]599999999
+            }
+        },
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": [REDACTED].0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-[REDACTED]9T05:45:53.326[REDACTED]77Z",
+    "finished_at": "2026-09-[REDACTED]9T07:07:38.087982Z",
+    "environment_setup": {
+        "started_at": "2026-09-[REDACTED]9T05:45:53.387244Z",
+        "finished_at": "2026-09-[REDACTED]9T05:45:54.8[REDACTED][REDACTED]925Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-[REDACTED]9T05:45:54.8[REDACTED][REDACTED]989Z",
+        "finished_at": "2026-09-[REDACTED]9T05:48:55.88846[REDACTED]Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-[REDACTED]9T05:48:55.888655Z",
+        "finished_at": "2026-09-[REDACTED]9T07:04:29.3868[REDACTED]5Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-[REDACTED]9T07:04:46.[REDACTED]75340Z",
+        "finished_at": "2026-09-[REDACTED]9T07:07:38.087959Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,21 @@
+{
+  "run_id": "run-2026-07-gamma",
+  "generated_by": "score_v3.py",
+  "models": {
+    "aurora-4-pro": {
+      "tasks_scored": 14,
+      "trials_counted": 22,
+      "trials_excluded": 4
+    },
+    "basilisk-2": {
+      "tasks_scored": 13,
+      "trials_counted": 24,
+      "trials_excluded": 2
+    },
+    "cinder-9-turbo": {
+      "tasks_scored": 14,
+      "trials_counted": 25,
+      "trials_excluded": 5
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "checks": {
+    "verifiable": {
+      "outcome": "pass",
+      "explanation": "The verifier is a pinned pytest suite with no runtime network installs in test.sh (all deps baked into tests/Dockerfile); empirically re-running it twice against the unpatched tree gave identical 38-failed/4-passed results and twice against the patched tree gave identical 42/42 passes, confirming determinism and reliability."
+    },
+    "solvable": {
+      "outcome": "pass",
+      "explanation": "The reference patch was applied to a fresh clone of the pinned vLLM commit and empirically verified to take the suite from 38/42 failing to 42/42 passing in ~37s, well within the stated budgets; the fix (a resumable JSON/XML scanner) is implementable by an expert in the domain in a few hours."
+    },
+    "difficult": {
+      "outcome": "pass",
+      "explanation": "Requires building a prefix-stable, resumable JSON/XML streaming scanner that correctly handles escapes, surrogate pairs, numbers and keys while meeting linear-time and low-latency constraints -- this is genuine LLM-serving-infrastructure expertise well beyond an undergraduate course project."
+    },
+    "interesting": {
+      "outcome": "pass",
+      "explanation": "This is a realistic regression class in a widely-deployed real project (vLLM's OpenAI-compatible streaming tool-call parsers); engineers operating LLM serving stacks with multi-token decoding would genuinely encounter and need to fix exactly this bug."
+    },
+    "outcome_verified": {
+      "outcome": "pass",
+      "explanation": "The instruction states the end-state contract (chunking-invariant output matching the non-streaming extractor, plus mechanistic latency/throughput bounds needed to rule out the buffering shortcut) without prescribing an implementation approach or specific tools."
+    },
+    "anti_cheat_robustness": {
+      "outcome": "pass",
+      "explanation": "Tests and oracle data live only in the verifier image (separate-verifier mode); the agent image contains no tests/ or solution/; the non-streaming oracle is computed live from the same parser code rather than hardcoded, and scenario 'expected' values are structurally derived (built via json.dumps then round-tripped), not opaque."
+    },
+    "task_security": {
+      "outcome": "pass",
+      "explanation": "All Dockerfiles, scripts and the patch perform only legitimate, clearly purposed actions (pinned pip/apt installs, a shallow git checkout of the official vllm-project/vllm repo, privilege-dropping test isolation); no exfiltration, obfuscation, or destructive operations were found."
+    },
+    "functional_verification": {
+      "outcome": "pass",
+      "explanation": "Tests execute the agent's parser code directly (extract_tool_calls_streaming / extract_tool_calls) and assert on real outputs, bookkeeping attributes, and timing -- there is no string/keyword matching against source files."
+    },
+    "deterministic_reproducible": {
+      "outcome": "pass",
+      "explanation": "All pip dependencies are exact-pinned in both Dockerfiles, the vllm checkout is pinned to a full commit SHA, apt packages are deliberately left unpinned per convention, and randomized schedules use fixed seeds; empirical re-runs produced identical pass/fail results across repeats."
+    },
+    "essential_difficulty": {
+      "outcome": "pass",
+      "explanation": "The difficulty comes from genuine algorithmic reasoning (resumable scanning, escape/surrogate hold-back, prefix-stability proofs) rather than output-formatting minutiae; the byte-for-byte matching requirement is the core invariant being tested, not an arbitrary precision nit."
+    },
+    "test_instruction_alignment": {
+      "outcome": "pass",
+      "explanation": "Every instruction requirement (chunking-invariant name/arguments, bookkeeping field agreement, content preservation, the 2-delta/[REDACTED]6-char/2-delta/[REDACTED]50000-char-20s bounds) has a corresponding test, and no test introduces requirements beyond what the instruction states; the numeric bounds match exactly between instruction.md and test_stream.py."
+    },
+    "novel": {
+      "outcome": "pass",
+      "explanation": "This is a specific, custom regression scenario built around real vLLM parser internals at a pinned commit, not a textbook algorithm or widely-published exercise that could be reproduced from memorized training data."
+    },
+    "agentic": {
+      "outcome": "pass",
+      "explanation": "Solving requires exploring the vLLM checkout, understanding the streaming tool-parser API/contract, iterating against a suite the agent cannot read, and balancing competing invariance/latency/throughput constraints -- not a one-shot generation task."
+    },
+    "reviewable": {
+      "outcome": "pass",
+      "explanation": "Although the domain is specialized, task.toml's difficulty/solution/verification explanations plus the README give a non-specialist reviewer enough context to verify the setup is consistent, and expected values in tests are structurally derived rather than hardcoded oracles."
+    },
+    "instruction_concision": {
+      "outcome": "pass",
+      "explanation": "instruction.md is concise, uses absolute paths (/app/vllm), states the end-state goal upfront, includes only mechanistic anti-cheat constraints (necessary to rule out buffering), and contains no roleplay, headings, or hints at the implementation approach."
+    },
+    "solution_quality": {
+      "outcome": "pass",
+      "explanation": "The solution is a genuine, verified code patch (confirmed empirically to flip 38 failures to 0) that removes the old buggy partial-JSON-based approach and replaces it with a real resumable scanner; the large patch is stored as its own file under solution/patches/ rather than inlined as a heredoc in solve.sh."
+    },
+    "separate_verifier_configured": {
+      "outcome": "pass",
+      "explanation": "The verifier's own tooling (pytest, pytest-json-ctrf, and the parsers' runtime deps) is fully baked into tests/Dockerfile with no runtime installs in test.sh; the agent artifact (tool_parsers/) lands on a pre-created path; and the pinned vllm commit SHA is identical across environment/Dockerfile and tests/Dockerfile."
+    },
+    "environment_hygiene": {
+      "outcome": "pass",
+      "explanation": "environment/Dockerfile copies no tests/ or solution/ content and installs only the parsers' own runtime deps (not pytest/ctrf); tests/Dockerfile owns all test-only tooling; both Dockerfiles run apt-get update before installs and clean up /var/lib/apt/lists afterward, with apt packages left unpinned as is conventional."
+    },
+    "structured_data_schema": {
+      "outcome": "not_applicable",
+      "explanation": "The task asks the agent to fix parser code in place; it does not require the agent to produce any new structured output artifact (JSON/CSV/API schema) of its own."
+    },
+    "typos": {
+      "outcome": "pass",
+      "explanation": "Close review of instruction.md, README.md, task.toml, and the test files found no typos in filenames, paths, commands, or identifiers; class names (JambaToolParser, Internlm2ToolParser, MiniCPM5XMLToolParser) and the pinned commit hash were cross-checked against the real upstream repo and match exactly."
+    },
+    "difficulty_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The explanation precisely identifies the competing constraints (invariance vs. latency vs. linear time) and the specific technical failure modes of naive fixes, giving a non-specialist a clear picture of why the task is hard for both a human and an agent; it does not explicitly restate who would do this in the real world within that field, but that context is given in the adjacent relevant_experience field."
+    },
+    "solution_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The explanation accurately describes the StreamingToolCallScanner strategy and how each parser uses it, and this description is consistent with what the actual patch implements (confirmed by reading the patch's JSON scanner and jamba/internlm2/minicpm changes)."
+    },
+    "verification_explanation_quality": {
+      "outcome": "pass",
+      "explanation": "The explanation concretely describes what is checked (byte-for-byte argument matching, bookkeeping agreement, latency/throughput bounds) and how (forked, privilege-dropped tests, root-controlled reward); the latency/throughput numbers it cites are direct copies of the instruction's own bounds rather than uncalibrated inequality thresholds, and it matches the actual test file exactly (42 collected tests, [REDACTED]7 schedules)."
+    },
+    "category_and_tags": {
+      "outcome": "pass",
+      "explanation": "category=ML / subcategory=Inference correctly reflects the primary domain (LLM serving internals), and tags (vllm, llm-inference, tool-calling, streaming, regression) are specific and directly relevant rather than generic."
+    },
+    "task_name": {
+      "outcome": "pass",
+      "explanation": "\"vllm-stream-args\" is a concise, descriptive, kebab-case, 3-word slug that clearly signals the task is about streaming argument handling in vLLM."
+    },
+    "resource_configuration": {
+      "outcome": "pass",
+      "explanation": "Verifier timeout ([REDACTED]800s) comfortably covers the ~37s empirically observed suite runtime plus margin; agent timeout (28800s) matches the instruction's stated budget and the task's genuine multi-hour difficulty; environment resources (2 CPUs, 4GB RAM, no GPU) are modest and appropriate since torch/model inference is stubbed out entirely, keeping difficulty in reasoning rather than computation."
+    },
+    "task_readme": {
+      "outcome": "pass",
+      "explanation": "README.md gives useful reviewer-facing development context (what's under test, patch scope, schedule generation, privilege-drop mechanics) and explicitly points to task.toml metadata rather than duplicating it."
+    },
+    "expert_time_estimate": {
+      "outcome": "pass",
+      "explanation": "6.0 hours is a plausible best-case expert estimate for designing a resumable, prefix-stable JSON/XML scanner and validating it against 42 chunking/latency/throughput tests, and it is consistent with the stated difficulty and the 8-hour agent timeout."
+    },
+    "task_toml_schema": {
+      "outcome": "pass",
+      "explanation": "All fields used ([task] name/version/description/keywords/authors, [metadata] author_name/author_email/author_organization/category/subcategory/tags/expert_time_estimate_hours/difficulty_explanation/solution_explanation/verification_explanation/relevant_experience, [verifier] timeout_sec/environment_mode, [agent] timeout_sec, [environment] build_timeout_sec/cpus/memory_mb/storage_mb/gpus, root-level artifacts) are all valid Harbor fields; no invented fields were found."
+    },
+    "no_extraneous_files": {
+      "outcome": "pass",
+      "explanation": "The task directory contains only required scaffold files (task.toml, instruction.md, environment/Dockerfile, tests/, solution/) plus an allowed README.md; no cruft, backups, or unreferenced files were found."
+    },
+    "artifact_efficiency": {
+      "outcome": "fail",
+      "explanation": "The declared artifact (/app/vllm/vllm/tool_parsers/) ships the entire 46-file, ~525KB directory even though the reference fix touches only 4 files, and the verifier already bakes an identical pristine checkout of the same pinned commit -- a scoped artifact list, an exclude for the untouched files, or a git-diff collect hook against the baked baseline would avoid needlessly duplicating ~470KB of build-time-fixed content on every trial."
+    },
+    "verifier_execution_isolation": {
+      "outcome": "pass",
+      "explanation": "Agent-authored parser modules are imported lazily only inside a per-test forked child that immediately drops to uid/gid 65534 before running the test; the reward directory is chmod 0700 before any agent code runs; the trusted root pytest process derives pass/fail from a [REDACTED]-byte pipe verdict (not a large pipe transfer) and only root flips reward.txt to [REDACTED]; stray processes are swept with pkill -u 65534 after the run."
+    },
+    "ctrf_reporting": {
+      "outcome": "pass",
+      "explanation": "test.sh invokes pytest with --ctrf /logs/verifier/ctrf.json; since pytest itself (unlike the per-test forked children) runs as root, it can write directly to the root-only /logs/verifier directory without needing a copy-after-run workaround."
+    },
+    "do_not_modify_enforced": {
+      "outcome": "not_applicable",
+      "explanation": "instruction.md contains no \"do not modify/preserve\" constraint naming a concrete artifact the agent must leave untouched; it only scopes where the fix should go, which is not this criterion's concern."
+    },
+    "binary_reward": {
+      "outcome": "pass",
+      "explanation": "test.sh writes reward.txt=0 unconditionally up front and only overwrites it with a literal [REDACTED] if the pytest invocation's exit code is zero; no fractional, weighted, or clamped value is ever written on any path."
+    }
+  }
+}

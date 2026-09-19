@@ -1,0 +1,134 @@
+============================= test session starts ==============================
+platform linux -- Python 3.[REDACTED]2.[REDACTED]4, pytest-9.[REDACTED].[REDACTED], pluggy-[REDACTED].6.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2, anyio-4.[REDACTED]5.[REDACTED]
+collected 72 items
+
+test_stream.py ..................F...................................... [ 79%]
+...............                                                          [[REDACTED]00%]
+
+=================================== FAILURES ===================================
+_ test_stream_matches_non_streaming_for_every_split[jamba_second_block_is_ignored_like_non_streaming] _
+
+scenario = 'jamba_second_block_is_ignored_like_non_streaming'
+
+    @pytest.mark.parametrize("scenario", sorted(SCENARIOS))
+    def test_stream_matches_non_streaming_for_every_split(scenario):
+        kind, text, expected, content = SCENARIOS[scenario]
+        truth_args = _check_truth(kind, text, expected)
+        all_schedules = schedules(text, SPECIALS[kind])
+        for deltas in all_schedules.values():
+            assert "".join(deltas) == text
+        results = run_streams(kind, all_schedules)
+        assembled = {}
+        failures = []
+        for sname, r in results.items():
+            problems = []
+            if set(r["names"]) != set(range(len(truth_args))) or set(r["args"]) != set(range(len(truth_args))):
+                problems.append(f"indices names={sorted(r['names'])} args={sorted(r['args'])} want={list(range(len(truth_args)))}")
+            for i, (name, _) in enumerate(expected):
+                if r["names"].get(i) != [name]:
+                    problems.append(f"index {i} names {r['names'].get(i)!r}")
+                if r["args"].get(i) != truth_args[i]:
+                    problems.append(f"index {i} arguments {r['args'].get(i)!r} != non-streaming {truth_args[i]!r}")
+            if content is not None and r["content"].strip() != content.strip():
+                problems.append(f"content {r['content']!r}")
+            assembled[sname] = dict(r["args"])
+            if problems:
+                failures.append(f"{sname} ({len(all_schedules[sname])} deltas): " + "; ".join(problems))
+>       assert not failures, "\n".join(failures)
+E       AssertionError: whole ([REDACTED] deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         [REDACTED]atom ([REDACTED]07 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         2atoms (54 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         3atoms (36 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         5atoms (22 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         8atoms ([REDACTED]4 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         [REDACTED]3atoms (9 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         ends_at_special (4 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         specials_alone (8 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         whitespace ([REDACTED]3 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         punctuation (38 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         random0 ([REDACTED]8 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         random[REDACTED] ([REDACTED]9 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         random2 ([REDACTED]8 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         random3 ([REDACTED]6 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         random4 (22 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E         random5 ([REDACTED]5 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]
+E       assert not ['whole ([REDACTED] deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]', '[REDACTED]atom ([REDACTED]07 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] ...tas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]', '8atoms ([REDACTED]4 deltas): indices names=[0, [REDACTED]] args=[0, [REDACTED]] want=[0]', ...]
+
+test_stream.py:493: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_arguments_is_null]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_arguments_key]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_control_character_escapes]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_number_forms]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_parameters_after_content]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_trailing_text_after_action_end]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_variant_ascii_escaped]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_variant_compact]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_variant_handwritten]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[internlm2_variant_indented]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_arguments_is_a_string]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_arguments_key_nested_inside_arguments]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_empty_containers_with_inner_whitespace]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_empty_values]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_escaped_keys_and_escaped_name]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_name_after_arguments]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_nested_after_content]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_padded_payload_crlf]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_tag_text_inside_a_string]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_three_calls_with_extra_keys]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_two_calls_unicode]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_variant_ascii_escaped]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_variant_compact]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_variant_handwritten]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_variant_indented]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[minicpm5_single_call]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[minicpm5_tokenizer_space_glyphs]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[minicpm5_two_calls_after_content]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[minicpm5_typed_values_with_whitespace]
+PASSED test_stream.py::test_stream_matches_non_streaming_for_every_split[minicpm5_without_tool_call_wrapper]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_arguments_is_null]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_arguments_key]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_control_character_escapes]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_number_forms]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_parameters_after_content]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_trailing_text_after_action_end]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_variant_ascii_escaped]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_variant_compact]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_variant_handwritten]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[internlm2_variant_indented]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_arguments_is_a_string]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_arguments_key_nested_inside_arguments]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_empty_containers_with_inner_whitespace]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_empty_values]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_escaped_keys_and_escaped_name]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_name_after_arguments]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_nested_after_content]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_padded_payload_crlf]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_second_block_is_ignored_like_non_streaming]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_tag_text_inside_a_string]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_three_calls_with_extra_keys]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_two_calls_unicode]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_variant_ascii_escaped]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_variant_compact]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_variant_handwritten]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[jamba_variant_indented]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[minicpm5_single_call]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[minicpm5_tokenizer_space_glyphs]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[minicpm5_two_calls_after_content]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[minicpm5_typed_values_with_whitespace]
+PASSED test_stream.py::test_parser_bookkeeping_agrees_with_what_was_streamed[minicpm5_without_tool_call_wrapper]
+PASSED test_stream.py::test_plain_text_still_streams_as_content[jamba]
+PASSED test_stream.py::test_plain_text_still_streams_as_content[internlm2]
+PASSED test_stream.py::test_plain_text_still_streams_as_content[minicpm5]
+PASSED test_stream.py::test_parsers_are_still_where_vllm_loads_them
+PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[internlm2]
+PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[jamba]
+PASSED test_stream.py::test_xml_name_and_parameters_stream_as_they_close
+PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[jamba]
+PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[internlm2]
+PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[minicpm5]
+FAILED test_stream.py::test_stream_matches_non_streaming_for_every_split[jamba_second_block_is_ignored_like_non_streaming]
+=================== [REDACTED] failed, 7[REDACTED] passed in [REDACTED]59.[REDACTED]9s (0:02:39) ===================

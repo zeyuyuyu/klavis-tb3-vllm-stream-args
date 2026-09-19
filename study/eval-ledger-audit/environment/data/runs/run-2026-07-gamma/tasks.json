@@ -1,0 +1,47 @@
+{
+  "science-task-003": {
+    "category": "science"
+  },
+  "science-task-007": {
+    "category": "science"
+  },
+  "science-task-011": {
+    "category": "science"
+  },
+  "security-task-002": {
+    "category": "security"
+  },
+  "security-task-006": {
+    "category": "security"
+  },
+  "security-task-010": {
+    "category": "security"
+  },
+  "security-task-014": {
+    "category": "security"
+  },
+  "software-task-000": {
+    "category": "software"
+  },
+  "software-task-004": {
+    "category": "software"
+  },
+  "software-task-008": {
+    "category": "software"
+  },
+  "software-task-012": {
+    "category": "software"
+  },
+  "sysadmin-task-001": {
+    "category": "sysadmin"
+  },
+  "sysadmin-task-005": {
+    "category": "sysadmin"
+  },
+  "sysadmin-task-009": {
+    "category": "sysadmin"
+  },
+  "sysadmin-task-013": {
+    "category": "sysadmin"
+  }
+}

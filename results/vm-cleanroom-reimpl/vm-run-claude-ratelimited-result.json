@@ -1,0 +1,51 @@
+{
+    "id": "25272cf2-6bf3-4148-8dae-517528c8a7eb",
+    "started_at": "2026-09-19T07:44:14.386349",
+    "updated_at": "2026-09-19T08:34:52.363736",
+    "finished_at": "2026-09-19T08:34:52.363736",
+    "n_total_trials": 3,
+    "stats": {
+        "n_completed_trials": 3,
+        "n_errored_trials": 3,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "claude-code__claude-opus-5__adhoc": {
+                "n_trials": 3,
+                "n_errors": 3,
+                "metrics": [
+                    {
+                        "mean": 0.6666666666666666
+                    }
+                ],
+                "pass_at_k": {
+                    "2": 1.0
+                },
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "vm-cleanroom-reimpl__FXhMwwX",
+                            "vm-cleanroom-reimpl__6hJ7J7B"
+                        ],
+                        "0.0": [
+                            "vm-cleanroom-reimpl__WMpb7Nm"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "ApiRateLimitError": [
+                        "vm-cleanroom-reimpl__FXhMwwX",
+                        "vm-cleanroom-reimpl__6hJ7J7B",
+                        "vm-cleanroom-reimpl__WMpb7Nm"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 20084708,
+        "n_cache_tokens": 19732566,
+        "n_output_tokens": 240193,
+        "cost_usd": 19.390918
+    }
+}
