@@ -30,15 +30,15 @@ matches the task in `tasks/`.
 | v4 (`vsa-run-codex-v4`, task as submitted) | 1 | codex | **fail** | 2 of 85 failed (`internlm2_text_between_plugin_and_brace`, and its bookkeeping twin) |
 | v4 | 2 | codex | solved | 85/85 |
 | v4 | 3 | codex | solved | 85/85 |
-| v4 (`vsa-run-claude-v4`) | 1 | claude-code opus-5 max | CLAUDE_T1 | CLAUDE_V1 |
-| v4 | 2 | claude-code | CLAUDE_T2 | CLAUDE_V2 |
-| v4 | 3 | claude-code | CLAUDE_T3 | CLAUDE_V3 |
+| v4 (`vsa-run-claude-v4`) | 1 | claude-code opus-5 max | solved | 85/85 |
+| v4 (`vsa-run-claude-v4-t2`) | 2 | claude-code | solved | 85/85 |
+| v4 (`vsa-run-claude-v4-t3c`) | 3 | claude-code | **fail** | 2 of 85 failed (`minicpm5_two_calls_after_content`, `minicpm5_two_functions_in_one_wrapper`: bookkeeping after a second XML call) |
 
 Codex fails this task in three of six official trials and solves it in the
 other three. **The submission does not meet the "all three trials must
 genuinely fail" bar for codex.** That is stated here rather than worked
 around; every failure listed is a genuine one (the agent finished, submitted,
-and was graded), and every solve is a genuine solve. CLAUDE_SUMMARY
+and was graded), and every solve is a genuine solve. Claude solves it in two of three official trials and fails the third: with two XML tool calls in one output it resets the first call's entry in `prev_tool_call_arr` to `{}` when the second call starts (`'{}' != '{"city": "Dallas"}'`), so the bookkeeping the instruction names and the serving layer reconciles against no longer describes what was streamed - the deltas themselves were correct. Claude's three earlier attempts at that slot all died to the subscription's five-hour rate limit (`ApiRateLimitError`, recorded under `results/vllm-stream-args/infra-failures/`) and do not count either way.
 
 Wall-clock per trial was 35 to 75 minutes for codex; each job's `result.json`
 and CTRF report is in `results/vllm-stream-args/` (harbor's secret redaction
@@ -120,4 +120,36 @@ recorded 0.0 in those runs is not evidence of anything.
 
 ## Reading
 
-READING
+Three readings survive the numbers.
+
+**The property was the right one; coverage was the coin.** Every failure on
+this task is an agent whose self-written harness never produced a shape the
+pinned non-streaming code handles - name after arguments, a call object with
+extra keys, a second `<tool_calls>` block, tokenizer glyphs, text before the
+opening brace. Every solve is an agent that went and read those code paths.
+Nothing in the instruction distinguishes the two runs; the same model with the
+same budget does either, about half the time. A grader can keep adding such
+shapes (v3 -> v4 caught one more run) but each one is a single coin flip
+removed, not a floor raised.
+
+**Timeouts were never the lever, and the brief says so.** The design that would
+reliably defeat these models on this codebase - fix all ~30 parsers, not three -
+would win mostly by running the eight-hour budget out, and the brief counts a
+timeout as an infrastructure failure. So the task had to be one an agent
+*finishes and is wrong about*, which is a much smaller target than "hard".
+
+**What did survive is worth having.** The chunking-invariance + latency +
+throughput + canonical-string contract is a real specification vLLM lacks,
+the reference is a real fix (prefix-stable canonical scanner, incremental XML
+driver), the 37-output battery is a regression suite upstream could use, and
+the `/cheat` trial exposed a verifier pattern - importing agent code into the
+pytest process - that other Terminal-Bench tasks in this style share. The
+rebuilt verifier (agent code only in a privilege-dropped worker, all judgement
+in the trusted process, `passed == collected` gate) is the part of this
+submission I would most want copied.
+
+If I were to keep going, I would not add a tenth shape. I would move the
+difficulty out of the engineering and into a domain where the oracle is not
+readable from the repository - the pattern the merged tasks that do defeat
+these models share (`docs/design-study.md`, "Why, with the evidence I could
+find").

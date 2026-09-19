@@ -55,7 +55,7 @@ incremental driver for the XML format.
 | nop | reward 0.0, 5/85 |
 | codex gpt-5.6-sol xhigh, 3 trials (task as submitted) | **fail, solved, solved** |
 | codex, 3 earlier trials on the previous grader version | fail, fail, solved |
-| claude-code opus-5 max, 3 trials | CLAUDE_GLANCE |
+| claude-code opus-5 max, 3 trials | **solved**, **solved**, **fail** (2 cases) |
 | `/cheat` codex | 0.0 (two runs refused by OpenAI's content filter; one genuine attempt against the hardened verifier scored 0.0; one genuine attempt against the earlier verifier scored 1.0 and is why it was rebuilt) |
 | `/cheat` claude-code | CLAUDE_CHEAT_GLANCE |
 

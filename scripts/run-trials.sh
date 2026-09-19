@@ -9,6 +9,12 @@
 #   claude setup-token                # -> CLAUDE_CODE_OAUTH_TOKEN
 #   CLAUDE_CODE_OAUTH_TOKEN=... ./run-trials.sh
 #
+# Claude subscriptions: on a Max plan one opus-5 `max` trial of this task
+# roughly exhausts a five-hour window; trials 2 and 3 then fail with
+# ApiRateLimitError (an infrastructure failure that does not count) and have to
+# be re-run one per window (`-k 1`), which is how the recorded claude trials
+# were obtained.
+#
 # Concurrency is deliberately low: three agent containers at 2 CPUs each plus
 # their setup (npm, nvm) is enough to push a 16-core / 30 GB host into agent
 # setup timeouts, which are infrastructure failures and do not count as model
