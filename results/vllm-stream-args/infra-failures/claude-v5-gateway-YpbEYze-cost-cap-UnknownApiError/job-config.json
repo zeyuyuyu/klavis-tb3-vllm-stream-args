@@ -1,0 +1,24 @@
+{
+    "job_name": "vsa-run-claude-v5-gw-t1",
+    "agent_setup_timeout_multiplier": 3.0,
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "claude-code",
+            "model_name": "anthropic/claude-opus-5",
+            "kwargs": {
+                "reasoning_effort": "max"
+            },
+            "env": {
+                "ANTHROPIC_BASE_URL": "https://api.commonstack.ai",
+                "ANTHROPIC_API_KEY": "ak-7****4da",
+                "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "tasks/vllm-stream-args"
+        }
+    ]
+}
