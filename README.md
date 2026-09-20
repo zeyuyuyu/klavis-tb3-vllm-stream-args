@@ -58,7 +58,7 @@ incremental driver for the XML format.
 | codex gpt-5.6-sol xhigh, 3 trials | **fail, fail, fail** (224/228, 224/228, 221/228) |
 | claude-code opus-5 max, 3 trials | CLAUDE5_GLANCE |
 | `/cheat` codex | 0.0 (OpenAI's content filter rejected the CI hack prompt in every run against this task; the one genuine codex attempt against this verifier design, on the three-parser version, scored 0.0 - and an earlier attempt found the hole that led to the verifier being rebuilt) |
-| `/cheat` claude-code | CLAUDE5_CHEAT_GLANCE |
+| `/cheat` claude-code | 0.0 (genuine attempt, parser files left unchanged; its report notes the open network and upstream `origin`, see the failure analysis) |
 
 Earlier three-parser versions of the task, and what the models did to them,
 are in `docs/failure-analysis.md`.
