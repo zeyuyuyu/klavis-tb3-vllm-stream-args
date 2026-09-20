@@ -119,7 +119,8 @@ The contract went through three versions, each forced by a probe.
 | v1 | assembled arguments parse to the non-streaming object, identical across schedules | codex gpt-5.6-sol xhigh solved it in **25 min** by buffering each call until complete and emitting it whole |
 | v2 | v1 + latency (name within 2 deltas, string arguments at most 16 characters behind, XML params within 2 deltas of closing) + throughput (150 000 characters one per delta in under 20 s) | codex (65 min) re-architected to append-only scanners with canonical `json.dumps` output; graded later by the v3 suite it passed every invariance, canonical-string, latency and throughput case and failed only the bookkeeping cases its instruction had not stated - so v2 as written would have been solved |
 | v3 | v2 + assembled text byte-for-byte equal to the non-streaming `json.dumps` string, and the parser's `prev_tool_call_arr` / `streamed_args_for_tool` / `get_remaining_unstreamed_args()` consistent with what was sent; 31 outputs | official codex trials: fail (7 cases), fail (1 case), **solved** |
-| v4 (submitted) | v3 + six more outputs drawn from the non-streaming code paths (text between `<\|plugin\|>` and `{`, missing `<\|action_end\|>`, two `<function>` blocks in one wrapper, single-quoted attributes, `<think>` prefix, `name` inside arguments) and one output the extractor rejects; verifier rebuilt around a privilege-dropped worker after a `/cheat` trial passed via `pytest.skip` | official codex trials: fail (2 cases), **solved**, **solved**; claude: **solved**, **solved**, fail (2 cases) |
+| v4 | v3 + six more outputs drawn from the non-streaming code paths (text between `<\|plugin\|>` and `{`, missing `<\|action_end\|>`, two `<function>` blocks in one wrapper, single-quoted attributes, `<think>` prefix, `name` inside arguments) and one output the extractor rejects; verifier rebuilt around a privilege-dropped worker after a `/cheat` trial passed via `pytest.skip` | official codex trials: fail (2 cases), **solved**, **solved**; claude: **solved**, **solved**, fail (2 cases) |
+| v5 (submitted) | the same contract for **twelve** parsers with twelve wire formats (Jamba, InternLM2, MiniCPM XML, Hermes, ERNIE 4.5, Hunyuan, Phi-4-mini, Granite, Apertus, DeepSeek-V3, Llama-3 JSON, xLAM), each specified by its own non-streaming extractor, quirks included; 188 generated scenarios + no-call scenarios, 228 cases | official codex trials: **fail, fail, fail** (4, 4 and 7 cases; 2.5-3.2 h each, full rewrites); claude: CLAUDE5_DS |
 
 Each tightening is a real requirement of the serving layer rather than an
 artificial hurdle: clients render arguments as they arrive, these parsers run on
@@ -143,7 +144,9 @@ output shape the agent's self-written tests never generated (name after
 arguments, a second block, tokenizer glyphs, text before the brace), and every
 solve came from an agent that had gone and read the non-streaming code paths
 instead of trusting `json.dumps`-shaped inputs. That is a coin the agent flips
-per run - three heads and three tails in six official trials.
+per run - three heads and three tails in six official trials on three
+parsers. v5 makes it flip the coin twelve times: the same models, given twelve
+oracles to read, missed at least one rule in every one of the codex trials.
 
 ## What I would do next
 

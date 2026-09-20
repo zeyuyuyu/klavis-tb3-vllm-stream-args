@@ -9,9 +9,9 @@ Read these two first:
 
 - [`docs/failure-analysis.md`](docs/failure-analysis.md) — the official trial
   results for the submitted task, what the agents got wrong and right, the
-  `/cheat` trial that found a verifier hole and how it was closed, and an
-  honest reading of the numbers. **Codex failed 3 of 6 official trials on this
-  design and solved 3; the submission does not meet the all-trials-fail bar.**
+  `/cheat` trial that found a verifier hole and how it was closed, and a
+  reading of the numbers. **Codex failed all three official trials on the
+  submitted task; CLAUDE5_HEADLINE**
 - [`docs/design-study.md`](docs/design-study.md) — eight complete tasks were
   built for this submission and each was probed against the CI's own agent
   configurations. The study reports what each design tested, what the models
@@ -24,21 +24,23 @@ claims in the study can be checked rather than taken on trust.
 ## The task
 
 `/app/vllm` is [vllm-project/vllm](https://github.com/vllm-project/vllm) at
-commit `877dae9c`. Three of its streaming tool-call parsers (Jamba, InternLM2,
-MiniCPM XML) return different `arguments` depending on how the decoder chunks
-the model output. The agent has to fix them in place so that, for any split of
-the output into deltas, the client assembles exactly the tool calls the
-non-streaming extractor returns — one name per index, arguments byte-for-byte
+commit `877dae9c`. Twelve of its streaming tool-call parsers (Jamba, InternLM2,
+MiniCPM XML, Hermes, ERNIE 4.5, Hunyuan, Phi-4-mini, Granite, Apertus,
+DeepSeek-V3, Llama-3 JSON, xLAM) return different `arguments` depending on how
+the decoder chunks the model output. The agent has to fix them in place so
+that, for any split of the output into deltas, the client assembles exactly
+the tool calls each parser's own non-streaming extractor returns — one name per index, arguments byte-for-byte
 the non-streaming `json.dumps` string, parser bookkeeping the serving layer can
 reconcile — while still streaming (name within 2 deltas, string arguments at
 most 16 characters behind the model, XML params within 2 deltas of closing) and
 in linear time (150 000 characters one per delta in under 20 s).
 
-The grader replays 37 model outputs — compact, indented, ASCII-escaped and
-hand-written JSON; non-object arguments; nested `"arguments"` keys; a second
-block the extractor ignores; tokenizer glyphs; typed XML values; text between
-`<|plugin|>` and `{` — through 17 delivery schedules each, plus latency and
-throughput probes. The pytest process never imports the agent's code: a
+The grader generates 188 model outputs across the twelve formats — compact,
+indented, ASCII-escaped and hand-written JSON; non-object arguments; nested
+`"arguments"` keys; skipped entries, `{}` defaults, key-as-name, trailing text
+as content and the other rules each extractor actually applies; tokenizer
+glyphs; typed XML values — and replays each through 17 delivery schedules,
+plus no-call, latency and throughput probes (228 cases). The pytest process never imports the agent's code: a
 privilege-dropped worker subprocess drives the parsers and returns data.
 
 The reference fix (`solution/`) is a resumable scanner over the raw model text
@@ -50,14 +52,16 @@ incremental driver for the XML format.
 | check | result |
 |---|---|
 | 22 static checks (`scripts/checks/`) | all pass — [`results/static-checks.md`](results/static-checks.md) |
-| rubric review (`claude-code` sonnet, `scripts/review/`) | 33 pass / 2 not applicable / 0 fail on the submitted files ([`results/vllm-stream-args/rubric-review-verdicts.json`](results/vllm-stream-args/rubric-review-verdicts.json)); the same verdict on three earlier revisions, with two intermediate runs each flagging one stale number that was then corrected |
-| oracle | reward 1.0, 85/85 |
-| nop | reward 0.0, 5/85 |
-| codex gpt-5.6-sol xhigh, 3 trials (task as submitted) | **fail, solved, solved** |
-| codex, 3 earlier trials on the previous grader version | fail, fail, solved |
-| claude-code opus-5 max, 3 trials | **solved**, **solved**, **fail** (2 cases) |
-| `/cheat` codex | 0.0 (two runs refused by OpenAI's content filter; one genuine attempt against the hardened verifier scored 0.0; one genuine attempt against the earlier verifier scored 1.0 and is why it was rebuilt) |
-| `/cheat` claude-code | 0.0 (genuine attempt, no bypass found) |
+| rubric review (`claude-code` sonnet, `scripts/review/`) | 33 pass / 2 not applicable / 0 fail — [`results/vllm-stream-args/rubric-review-verdicts.json`](results/vllm-stream-args/rubric-review-verdicts.json) |
+| oracle | reward 1.0, 229/229 |
+| nop | reward 0.0, 46/229 |
+| codex gpt-5.6-sol xhigh, 3 trials | **fail, fail, fail** (224/228, 224/228, 221/228) |
+| claude-code opus-5 max, 3 trials | CLAUDE5_GLANCE |
+| `/cheat` codex | 0.0 (OpenAI's content filter rejected the CI hack prompt in every run against this task; the one genuine codex attempt against this verifier design, on the three-parser version, scored 0.0 - and an earlier attempt found the hole that led to the verifier being rebuilt) |
+| `/cheat` claude-code | CLAUDE5_CHEAT_GLANCE |
+
+Earlier three-parser versions of the task, and what the models did to them,
+are in `docs/failure-analysis.md`.
 
 ## Reproducing
 

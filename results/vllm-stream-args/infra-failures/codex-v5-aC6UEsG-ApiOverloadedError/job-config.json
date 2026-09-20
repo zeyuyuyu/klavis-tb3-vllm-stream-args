@@ -1,0 +1,23 @@
+{
+    "job_name": "vsa-run-codex-v5",
+    "n_attempts": 3,
+    "agent_setup_timeout_multiplier": 3.0,
+    "n_concurrent_trials": 3,
+    "agents": [
+        {
+            "name": "codex",
+            "model_name": "openai/gpt-5.6-sol",
+            "kwargs": {
+                "reasoning_effort": "xhigh"
+            },
+            "env": {
+                "CODEX_FORCE_AUTH_JSON": "****"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "tasks/vllm-stream-args"
+        }
+    ]
+}

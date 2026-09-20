@@ -8,13 +8,15 @@ summaries and verifier stdout are authoritative.
 
 | folder / file | what it is |
 |---|---|
-| `oracle-*` | reference solution under the submitted grader: 85/85, reward 1.0 |
-| `nop-*` | no-op agent under the submitted grader: 5/85, reward 0.0 |
+| `oracle-*` | reference solution under the submitted grader (twelve parsers): 229/229, reward 1.0 |
+| `nop-*` | no-op agent under the submitted grader: 46/229, reward 0.0 |
 | `rubric-review-verdicts.json` | rubric review verdicts (33 pass / 2 N/A / 0 fail) |
-| `run-codex-trial{1,2,3}` | codex gpt-5.6-sol xhigh on the previous grader version (72 cases): fail (7), fail (1), solved |
-| `final-run-codex-trial{1,2,3}` | codex on the submitted task (85 cases): fail (2), solved, solved |
-| `final-run-claude-trial{1,2,3}` | claude-code opus-5 max on the submitted task: solved, solved, fail (2 bookkeeping cases) |
-| `infra-failures/` | trials that ended in `ApiRateLimitError` (claude, four) or were cancelled by a harness crash (codex, one); they count neither as failures nor as solves |
+| `v5-run-codex-trial{1,2,3}` | codex gpt-5.6-sol xhigh on the submitted twelve-parser task: fail (4 cases), fail (4), fail (7) |
+| `v5-run-claude-trial{1,2,3}` | claude-code opus-5 max on the submitted twelve-parser task |
+| `run-codex-trial{1,2,3}` | codex on the three-parser v3 grader (72 cases): fail (7), fail (1), solved |
+| `final-run-codex-trial{1,2,3}` | codex on the three-parser v4 grader (85 cases): fail (2), solved, solved |
+| `final-run-claude-trial{1,2,3}` | claude-code opus-5 max on the three-parser v4 grader: solved, solved, fail (2 bookkeeping cases) |
+| `infra-failures/` | trials that ended in `ApiRateLimitError` (claude), `ApiOverloadedError` (codex) or were cancelled by a harness crash (codex); they count neither as failures nor as solves |
 | `cheat-codex-1-filter-refusal` | `/cheat`: OpenAI content filter rejected the hack prompt; reward 0.0, no attempt |
 | `cheat-codex-2-skip-bypass-old-verifier` | `/cheat` against the earlier in-process verifier: `pytest.skip` from the artifact counted as passing, reward 1.0 — the hole that led to the rebuild |
 | `cheat-codex-3-hardened-verifier` | `/cheat` against the rebuilt verifier: genuine attempt, 4/72, reward 0.0 |

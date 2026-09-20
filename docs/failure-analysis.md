@@ -17,33 +17,57 @@ own eight-hour agent budget. Both agents ran on subscriptions
 
 ## Standard trials
 
-Two official codex jobs were run on this design, because the grader was
-tightened once after the first job (see "The contracts that were not enough"
-below and `docs/design-study.md`). Both are reported; the second is the one that
-matches the task in `tasks/`.
+The task went through five grader versions; the submitted one (v5, twelve
+parsers) is the one that matters, and the earlier ones are reported because
+they are the record of how it got there.
+
+### Submitted task (v5, twelve parsers)
 
 | job | trial | agent | outcome | verifier |
 |---|---|---|---|---|
-| v3 (`vsa-run-codex`, `vsa-run-codex-b`) | 1 | codex gpt-5.6-sol xhigh | **fail** | 7 of 72 cases failed |
-| v3 | 2 | codex | **fail** | 1 of 72 failed (`jamba_second_block_is_ignored_like_non_streaming`) |
+| `vsa-run-codex-v5` (`q8AYSwb`) | 1 | codex gpt-5.6-sol xhigh | **fail** | 4 of 228 cases failed: hunyuan/xLAM skipped-entry rule, MiniCPM typed values with whitespace, xLAM text-before-array |
+| `vsa-run-codex-v5` (`EnAhJqw`) | 2 | codex | **fail** | 4 of 228: ERNIE `{}` default, hunyuan/xLAM skipped-entry rule, xLAM text-before-array |
+| `vsa-run-codex-v5-r1` (`JKYEHfi`) | 3 | codex | **fail** | 7 of 228: hunyuan/xLAM skipped-entry rule, string-lag latency bound on five JSON formats |
+| `vsa-run-claude-v5-gw-t1` | 1 | claude-code opus-5 max | CLAUDE5_T1 | CLAUDE5_V1 |
+| CLAUDE5_J2 | 2 | claude-code | CLAUDE5_T2 | CLAUDE5_V2 |
+| CLAUDE5_J3 | 3 | claude-code | CLAUDE5_T3 | CLAUDE5_V3 |
+
+Each codex run was a complete attempt: 2h37m-3h13m of wall clock, 78-125
+commands, a shared incremental JSON scanner written from scratch, all twelve
+streaming methods rewritten, its own chunk-invariance and latency test suite
+added, and a closing report claiming success. All three then failed the same
+family of cases: rules that exist only in the non-streaming extractors
+(Hunyuan and xLAM skip a call object that has no `"arguments"`, and index the
+remaining calls compactly; xLAM treats text before the array as "no tool
+call"; ERNIE defaults a missing `"arguments"` to `{}`), and, in one run, the
+16-character string-lag bound. One further codex run
+(`aC6UEsG`, `ApiOverloadedError` after 17 commands) was an OpenAI-side outage
+and is filed under `infra-failures/`, not counted. CLAUDE5_SUMMARY
+
+### Earlier versions (three parsers)
+
+| job | trial | agent | outcome | verifier |
+|---|---|---|---|---|
+| v3 (`vsa-run-codex`, `vsa-run-codex-b`) | 1 | codex | **fail** | 7 of 72 |
+| v3 | 2 | codex | **fail** | 1 of 72 (`jamba_second_block_is_ignored_like_non_streaming`) |
 | v3 | 3 | codex | solved | 72/72 |
-| v4 (`vsa-run-codex-v4`, task as submitted) | 1 | codex | **fail** | 2 of 85 failed (`internlm2_text_between_plugin_and_brace`, and its bookkeeping twin) |
+| v4 (`vsa-run-codex-v4`) | 1 | codex | **fail** | 2 of 85 (`internlm2_text_between_plugin_and_brace`) |
 | v4 | 2 | codex | solved | 85/85 |
 | v4 | 3 | codex | solved | 85/85 |
-| v4 (`vsa-run-claude-v4`) | 1 | claude-code opus-5 max | solved | 85/85 |
-| v4 (`vsa-run-claude-v4-t2`) | 2 | claude-code | solved | 85/85 |
-| v4 (`vsa-run-claude-v4-t3c`) | 3 | claude-code | **fail** | 2 of 85 failed (`minicpm5_two_calls_after_content`, `minicpm5_two_functions_in_one_wrapper`: bookkeeping after a second XML call) |
+| v4 (`vsa-run-claude-v4*`) | 1 | claude-code opus-5 max | solved | 85/85 |
+| v4 | 2 | claude-code | solved | 85/85 |
+| v4 | 3 | claude-code | **fail** | 2 of 85 (bookkeeping after a second XML call) |
 
-Codex fails this task in three of six official trials and solves it in the
-other three. **The submission does not meet the "all three trials must
-genuinely fail" bar for codex.** That is stated here rather than worked
-around; every failure listed is a genuine one (the agent finished, submitted,
-and was graded), and every solve is a genuine solve. Claude solves it in two of three official trials and fails the third: with two XML tool calls in one output it resets the first call's entry in `prev_tool_call_arr` to `{}` when the second call starts (`'{}' != '{"city": "Dallas"}'`), so the bookkeeping the instruction names and the serving layer reconciles against no longer describes what was streamed - the deltas themselves were correct. Claude's three earlier attempts at that slot all died to the subscription's five-hour rate limit (`ApiRateLimitError`, recorded under `results/vllm-stream-args/infra-failures/`) and do not count either way.
+On three parsers the two models solved the task about half the time; the
+failures were always oracle quirks the agent's own harness never generated.
+That observation is what the twelve-parser version is built on: the
+per-parser chance of missing a quirk multiplies across formats.
 
-Wall-clock per trial was 35 to 75 minutes for codex; each job's `result.json`
-and CTRF report is in `results/vllm-stream-args/` (harbor's secret redaction
-replaces some digits in copied logs with `[REDACTED]`; the CTRF summaries and
-verifier stdout are authoritative).
+Wall-clock per trial was 35-75 minutes for codex on three parsers and 2.5-3.2
+hours on twelve; each job's `result.json` and CTRF report is in
+`results/vllm-stream-args/` (harbor's secret redaction replaces some digits
+in copied logs with `[REDACTED]`; the CTRF summaries and verifier stdout are
+authoritative).
 
 ## What codex got wrong, precisely
 
