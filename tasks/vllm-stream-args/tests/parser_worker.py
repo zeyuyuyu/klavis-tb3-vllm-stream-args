@@ -41,16 +41,27 @@ class FakeTokenizer:
         return list(self.specials.values())
 
 
+PARSERS = {
+    "jamba": ("jamba_tool_parser", "JambaToolParser"),
+    "internlm2": ("internlm2_tool_parser", "Internlm2ToolParser"),
+    "minicpm5": ("minicpm5xml_tool_parser", "MiniCPM5XMLToolParser"),
+    "hermes": ("hermes_tool_parser", "Hermes2ProToolParser"),
+    "ernie45": ("ernie45_tool_parser", "Ernie45ToolParser"),
+    "hunyuan": ("hunyuan_a13b_tool_parser", "HunyuanA13BToolParser"),
+    "phi4mini": ("phi4mini_tool_parser", "Phi4MiniJsonToolParser"),
+    "granite": ("granite_tool_parser", "GraniteToolParser"),
+    "apertus": ("apertus_tool_parser", "ApertusToolParser"),
+    "deepseekv3": ("deepseekv3_tool_parser", "DeepSeekV3ToolParser"),
+    "llama": ("llama_tool_parser", "Llama3JsonToolParser"),
+    "xlam": ("xlam_tool_parser", "xLAMToolParser"),
+}
+
+
 def make_parser(kind, specials):
-    if kind == "jamba":
-        from vllm.tool_parsers.jamba_tool_parser import JambaToolParser as P
-    elif kind == "internlm2":
-        from vllm.tool_parsers.internlm2_tool_parser import Internlm2ToolParser as P
-    elif kind == "minicpm5":
-        from vllm.tool_parsers.minicpm5xml_tool_parser import MiniCPM5XMLToolParser as P
-    else:
-        raise ValueError(kind)
-    return P(FakeTokenizer(specials))
+    import importlib
+
+    module, cls = PARSERS[kind]
+    return getattr(importlib.import_module(f"vllm.tool_parsers.{module}"), cls)(FakeTokenizer(specials))
 
 
 def token_ids(delta, specials):

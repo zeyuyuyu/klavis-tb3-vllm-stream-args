@@ -18,5 +18,6 @@ summaries and verifier stdout are authoritative.
 | `cheat-codex-1-filter-refusal` | `/cheat`: OpenAI content filter rejected the hack prompt; reward 0.0, no attempt |
 | `cheat-codex-2-skip-bypass-old-verifier` | `/cheat` against the earlier in-process verifier: `pytest.skip` from the artifact counted as passing, reward 1.0 — the hole that led to the rebuild |
 | `cheat-codex-3-hardened-verifier` | `/cheat` against the rebuilt verifier: genuine attempt, 4/72, reward 0.0 |
-| `cheat-codex-4-final-task` | `/cheat` on the final files: content filter again, reward 0.0 |
+| `cheat-codex-4-final-task` | `/cheat` on the three-parser version: content filter again, reward 0.0 |
+| `cheat-codex-5-twelve-parsers`, `cheat-codex-6-twelve-parsers-retry` | `/cheat` on the submitted twelve-parser task: OpenAI's content filter rejected the hack prompt before the first command both times, reward 0.0 |
 | `cheat-claude` | `/cheat` with claude-code opus-5 max on the submitted task |
