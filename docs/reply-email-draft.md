@@ -26,8 +26,8 @@ The repository documents every run, the four earlier grader versions and what
 the models did to them (the three-parser versions were solved about half the
 time, which is what motivated the twelve-parser version), a verifier hole a
 /cheat trial found (pytest.skip from inside the artifact) and the rebuilt
-verifier that closes it, and a study of the eight designs built and probed
-before this one.
+verifier that closes it, and a study of the seven designs built and probed before
+this one (all solved by the models, which is what shaped this design).
 
 I would be glad to discuss the design, the verification strategy, and the
 model-failure analysis.

@@ -1,6 +1,6 @@
 # Static checks — vllm-stream-args
 
-Run on 2026-09-19 against harbor-framework/terminal-bench at commit 7a337a8 with harbor 0.23.0:
+Run on 2026-09-21 against harbor-framework/terminal-bench at commit 7a337a8 with harbor 0.23.0, on the submitted task files:
 
 ```
 check-allow-internet.sh              PASS

@@ -196,6 +196,34 @@ the oracle twelve pieces of existing code with independent quirks. The
 per-file chance of a missed rule is modest; across twelve files it compounds,
 and the compounding, not any single file, is what the trials measured.
 
+## Against the contributing guide's difficulty rules
+
+The TB3 contributing guide asks for three things of difficulty, and v5 should
+be read against each.
+
+*Not arbitrary complexity.* Every graded behaviour in v5 is something the
+pinned tree already does in its non-streaming path; nothing was added to the
+formats, no synthetic quirk was invented, and the reference fix is the fix a
+maintainer would write. The breadth is the breadth of vLLM's own parser
+directory.
+
+*Not adversarial filtering.* The eight designs here were not a pool filtered
+for whatever the current models happen to miss. Seven were built on distinct
+theories of difficulty, each probed and each abandoned when solved; the
+eighth was then iterated on its own grader - first to forbid a degenerate
+solution (buffering), then to state the serving layer's real requirements
+(latency, bookkeeping, byte-exact output), then to close a verifier hole, then
+to widen scope from three formats to the twelve the platform serves. The gap
+it measures - whether an agent reads twelve independent specifications or
+generalises from three - is the guide's own "richer environments that agents
+must explore", not a corner of one model release: both frontier models and
+DeepSeek missed it in the same way.
+
+*Open internet.* Network stays on. Later upstream commits touch some of these
+parsers; a `/cheat` trial fetched them and found, as I had, that they do not
+satisfy the contract (the whole-output-in-one-delta case still fails), so the
+solution is not findable online.
+
 ## What I would do next
 
 - **Build for step count.** A task needing a sustained measure-adjust-re-run
