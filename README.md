@@ -3,7 +3,7 @@
 Built for the Klavis AI founding-engineer evaluation. The task is in
 [`tasks/vllm-stream-args/`](tasks/vllm-stream-args/); everything needed to
 re-run the checks and the trials is in [`scripts/`](scripts/) and the results
-are in [`results/`](results/).
+are in [`results/`](results/) (index: [`results/README.md`](results/README.md)).
 
 Read these two first:
 
