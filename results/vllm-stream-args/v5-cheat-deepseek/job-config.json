@@ -1,0 +1,23 @@
+{
+    "job_name": "vsa-cheat-deepseek-v5",
+    "agent_setup_timeout_multiplier": 3.0,
+    "n_concurrent_trials": 1,
+    "agents": [
+        {
+            "name": "terminus-2",
+            "model_name": "openai/deepseek/deepseek-flash-v4.1",
+            "kwargs": {
+                "api_base": "https://api.commonstack.ai/v1",
+                "reasoning_effort": "max"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "tasks/vllm-stream-args"
+        }
+    ],
+    "extra_instruction_paths": [
+        "docs/prompts/hack-trial-prompt.md"
+    ]
+}
