@@ -85,10 +85,14 @@ harbor run -p tasks/vllm-stream-args --agent nop --env docker --yes
 
 Trials: [`scripts/run-trials.sh`](scripts/run-trials.sh) uses the agent,
 model, reasoning effort and trial count from the repository's
-`.github/harbor-run-defaults.yml` (codex `gpt-5.6-sol` xhigh; claude-code
-`claude-opus-5` max with `CLAUDE_CODE_MAX_OUTPUT_TOKENS=128000`; three trials;
-`/cheat` with `docs/prompts/hack-trial-prompt.md`). Both agents ran on
-subscriptions (`CODEX_FORCE_AUTH_JSON=1`, `CLAUDE_FORCE_OAUTH=1`).
+`.github/harbor-run-defaults.yml` for codex (`gpt-5.6-sol`, xhigh, three
+trials, ChatGPT subscription via `CODEX_FORCE_AUTH_JSON=1`) and the
+reviewers' permitted substitution for the second model: DeepSeek v4.1 flash
+with `reasoning_effort=max`, run by harbor's `terminus-2` agent against an
+OpenAI-compatible endpoint (`--ak api_base=... --ae OPENAI_API_KEY=...`).
+`/cheat` trials use `docs/prompts/hack-trial-prompt.md`. Claude-code opus-5
+(max) was also run; why none of those runs counted is in the failure
+analysis.
 
 ## License
 

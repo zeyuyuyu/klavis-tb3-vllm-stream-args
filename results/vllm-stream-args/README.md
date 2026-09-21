@@ -12,7 +12,8 @@ summaries and verifier stdout are authoritative.
 | `nop-*` | no-op agent under the submitted grader: 46/229, reward 0.0 |
 | `rubric-review-verdicts.json` | rubric review verdicts (33 pass / 2 N/A / 0 fail) |
 | `v5-run-codex-trial{1,2,3}` | codex gpt-5.6-sol xhigh on the submitted twelve-parser task: fail (4 cases), fail (4), fail (7) |
-| `v5-run-claude-trial{1,2,3}` | claude-code opus-5 max on the submitted twelve-parser task |
+| `v5-run-deepseek-trial{1,2,3}` | DeepSeek v4.1 flash (reasoning max, terminus-2) on the submitted twelve-parser task - the reviewers' permitted substitution for claude |
+| `v5-cheat-deepseek` | `/cheat` with DeepSeek v4.1 flash (max) on the submitted task |
 | `run-codex-trial{1,2,3}` | codex on the three-parser v3 grader (72 cases): fail (7), fail (1), solved |
 | `final-run-codex-trial{1,2,3}` | codex on the three-parser v4 grader (85 cases): fail (2), solved, solved |
 | `final-run-claude-trial{1,2,3}` | claude-code opus-5 max on the three-parser v4 grader: solved, solved, fail (2 bookkeeping cases) |

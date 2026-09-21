@@ -43,12 +43,27 @@ run() {  # run <job-name> <attempts> <extra args...>
     --job-name "$name" "$@"
 }
 
-run run-codex    "$TRIALS" "${codex_args[@]}"
-run run-claude   "$TRIALS" "${claude_args[@]}"
-run cheat-codex  1 "${codex_args[@]}"  --extra-instruction-path "$CHEAT_PROMPT"
-run cheat-claude 1 "${claude_args[@]}" --extra-instruction-path "$CHEAT_PROMPT"
+# The reviewers allow one model substitution (DeepSeek v4.1 flash, max) for a
+# missing subscription. This submission's recorded runs use codex + DeepSeek,
+# because the claude subscription's five-hour window could not hold a trial of
+# this task and the paid route hit its spend cap (see docs/failure-analysis.md).
+# DeepSeek is served through an OpenAI-compatible endpoint by harbor's own
+# terminus-2 agent; set OPENAI_API_KEY and, if not using CommonStack, API_BASE.
+deepseek_args=(--agent terminus-2 --model openai/deepseek/deepseek-flash-v4.1
+               --ak api_base="${API_BASE:-https://api.commonstack.ai/v1}"
+               --ak reasoning_effort=max
+               --ae "OPENAI_API_KEY=${OPENAI_API_KEY:?set OPENAI_API_KEY for the DeepSeek endpoint}")
 
-for job in run-codex run-claude cheat-codex cheat-claude; do
+run run-codex     "$TRIALS" "${codex_args[@]}"
+run run-deepseek  "$TRIALS" "${deepseek_args[@]}"
+run cheat-codex   1 "${codex_args[@]}"    --extra-instruction-path "$CHEAT_PROMPT"
+run cheat-deepseek 1 "${deepseek_args[@]}" --extra-instruction-path "$CHEAT_PROMPT"
+# claude-code opus-5 (max), when a subscription or API budget that fits ~4 h
+# of opus is available:
+#   run run-claude  "$TRIALS" "${claude_args[@]}"
+#   run cheat-claude 1 "${claude_args[@]}" --extra-instruction-path "$CHEAT_PROMPT"
+
+for job in run-codex run-deepseek cheat-codex cheat-deepseek; do
   harbor analyze "jobs/$job" -m sonnet \
     -r docs/prompts/trial-analysis.toml \
     --job-prompt docs/prompts/trial-analysis-job.txt || true

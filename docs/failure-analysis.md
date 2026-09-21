@@ -28,9 +28,9 @@ they are the record of how it got there.
 | `vsa-run-codex-v5` (`q8AYSwb`) | 1 | codex gpt-5.6-sol xhigh | **fail** | 4 of 228 cases failed: hunyuan/xLAM skipped-entry rule, MiniCPM typed values with whitespace, xLAM text-before-array |
 | `vsa-run-codex-v5` (`EnAhJqw`) | 2 | codex | **fail** | 4 of 228: ERNIE `{}` default, hunyuan/xLAM skipped-entry rule, xLAM text-before-array |
 | `vsa-run-codex-v5-r1` (`JKYEHfi`) | 3 | codex | **fail** | 7 of 228: hunyuan/xLAM skipped-entry rule, string-lag latency bound on five JSON formats |
-| `vsa-run-claude-v5-gw-t1` | 1 | claude-code opus-5 max | CLAUDE5_T1 | CLAUDE5_V1 |
-| CLAUDE5_J2 | 2 | claude-code | CLAUDE5_T2 | CLAUDE5_V2 |
-| CLAUDE5_J3 | 3 | claude-code | CLAUDE5_T3 | CLAUDE5_V3 |
+| `vsa-run-deepseek-v5` | 1 | DeepSeek v4.1 flash, reasoning max (terminus-2) | DS5_T1 | DS5_V1 |
+| `vsa-run-deepseek-v5` | 2 | DeepSeek v4.1 flash | DS5_T2 | DS5_V2 |
+| `vsa-run-deepseek-v5` | 3 | DeepSeek v4.1 flash | DS5_T3 | DS5_V3 |
 
 Each codex run was a complete attempt: 2h37m-3h13m of wall clock, 78-125
 commands, a shared incremental JSON scanner written from scratch, all twelve
@@ -42,7 +42,20 @@ remaining calls compactly; xLAM treats text before the array as "no tool
 call"; ERNIE defaults a missing `"arguments"` to `{}`), and, in one run, the
 16-character string-lag bound. One further codex run
 (`aC6UEsG`, `ApiOverloadedError` after 17 commands) was an OpenAI-side outage
-and is filed under `infra-failures/`, not counted. CLAUDE5_SUMMARY
+and is filed under `infra-failures/`, not counted. 
+
+**Why DeepSeek and not claude-code on the submitted task.** The reviewers'
+brief allows one model substitution - DeepSeek v4.1 flash (max) - when a
+subscription is not available, and confirmed by email (2026-09-21) that
+codex + DeepSeek is an accepted pair. Claude-code opus-5 (max) was run on
+this task three times and none of the runs counted: two on the Max
+subscription died to the five-hour rate window after 1h08 and ~1h (a run of
+this task takes claude about four hours), and one through a paid
+Anthropic-compatible gateway died at 4h05 when the key's spend cap was
+reached (its partial state graded 206/228, xLAM untouched). All three are
+under `results/vllm-stream-args/infra-failures/`. The claude results that do
+exist are on the three-parser version below (solved, solved, fail).
+DS5_SUMMARY
 
 ### Earlier versions (three parsers)
 
