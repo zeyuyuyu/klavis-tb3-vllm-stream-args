@@ -53,6 +53,7 @@ incremental driver for the XML format.
 | check | result |
 |---|---|
 | 22 static checks (`scripts/checks/`) | all pass — [`results/static-checks.md`](results/static-checks.md) |
+| Docker build (environment and verifier images) | both build — [`results/docker-build.md`](results/docker-build.md) |
 | rubric review (`claude-code` sonnet, `scripts/review/`) | 33 pass / 2 not applicable / 0 fail — [`results/vllm-stream-args/rubric-review-verdicts.json`](results/vllm-stream-args/rubric-review-verdicts.json) |
 | oracle | reward 1.0, 228/228 |
 | nop | reward 0.0, 45/228 |
@@ -71,31 +72,54 @@ are in `docs/failure-analysis.md`.
 Everything was run against
 [`harbor-framework/terminal-bench`](https://github.com/harbor-framework/terminal-bench)
 at commit `7a337a83` (2026-09-16) with `harbor 0.23.0`, Docker backend, on a
-16-core / 30 GB host.
+16-core / 30 GB host. The CI's own trial runner
+(`.github/workflows/trials.yml`) invokes harbor with exactly these flags, one
+trial per job; the runs below use `-k 3` to take the three trials in one job.
 
 ```bash
-uv tool install harbor
+uv tool install harbor                      # harbor 0.23.0
 git clone https://github.com/harbor-framework/terminal-bench.git
 cp -r tasks/vllm-stream-args terminal-bench/tasks/
 cd terminal-bench
 
+# 1. static checks (the same 22 the CI's static-checks workflow runs)
 for check in scripts/checks/check-*.sh; do bash "$check" tasks/vllm-stream-args; done
+
+# 2. Docker build (the CI's validate-task docker-build step)
+docker build -t task-env-vllm-stream-args tasks/vllm-stream-args/environment
+docker build -t task-tests-vllm-stream-args tasks/vllm-stream-args/tests
+
+# 3. implementation-rubric review
 python3 scripts/review/stage_task.py tasks/vllm-stream-args /tmp/stage/rubric-review
-harbor run -p /tmp/stage/rubric-review -a claude-code -m sonnet --env docker --yes
+harbor run -p /tmp/stage/rubric-review -a claude-code -m anthropic/claude-sonnet-5 \
+  --env docker --yes --ae CLAUDE_FORCE_OAUTH=1 --ae CLAUDE_CODE_OAUTH_TOKEN="$TOKEN"
+
+# 4. oracle and nop validation
 harbor run -p tasks/vllm-stream-args --agent oracle --env docker --yes
-harbor run -p tasks/vllm-stream-args --agent nop --env docker --yes
+harbor run -p tasks/vllm-stream-args --agent nop    --env docker --yes
+
+# 5. standard trials, codex gpt-5.6-sol xhigh, three of them
+harbor run -p tasks/vllm-stream-args --agent codex --model openai/gpt-5.6-sol \
+  --env docker --yes --ae CODEX_FORCE_AUTH_JSON=1 --ak reasoning_effort=xhigh \
+  -k 3 -n 3 --agent-setup-timeout-multiplier 3
+
+# 6. standard trials, DeepSeek v4.1 flash max (the permitted substitution),
+#    through harbor's terminus-2 agent against an OpenAI-compatible endpoint
+export OPENAI_API_KEY=...                   # must be in harbor's own environment
+harbor run -p tasks/vllm-stream-args --agent terminus-2 \
+  --model openai/deepseek/deepseek-flash-v4.1 --env docker --yes \
+  --ak api_base=https://api.commonstack.ai/v1 --ak reasoning_effort=max \
+  -k 3 -n 3 --agent-setup-timeout-multiplier 3
+
+# 7. adversarial trials: the same two commands with -k 1 and
+#    --extra-instruction-path docs/prompts/hack-trial-prompt.md
 ```
 
-Trials: [`scripts/run-trials.sh`](scripts/run-trials.sh) uses the agent,
-model, reasoning effort and trial count from the repository's
-`.github/harbor-run-defaults.yml` for codex (`gpt-5.6-sol`, xhigh, three
-trials, ChatGPT subscription via `CODEX_FORCE_AUTH_JSON=1`) and the
-reviewers' permitted substitution for the second model: DeepSeek v4.1 flash
-with `reasoning_effort=max`, run by harbor's `terminus-2` agent against an
-OpenAI-compatible endpoint (`--ak api_base=... --ae OPENAI_API_KEY=...`).
-`/cheat` trials use `docs/prompts/hack-trial-prompt.md`. Claude-code opus-5
-(max) was also run; why none of those runs counted is in the failure
-analysis.
+[`scripts/run-trials.sh`](scripts/run-trials.sh) wraps 5-7 and takes the
+agent, model, reasoning effort and trial count from the repository's
+`.github/harbor-run-defaults.yml`. Claude-code opus-5 (max) was also run on
+this task; why none of those runs counted, and why the reviewers' permitted
+substitution was used instead, is in the failure analysis.
 
 ## License
 
