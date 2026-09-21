@@ -4,7 +4,7 @@ Subject: Re: BOSS直聘：创始工程师 - 大模型数据 — Terminal-Bench t
 
 Hi Xiangkai,
 
-Here is my submission for the coding test: REPO_URL
+Here is my submission for the coding test: https://github.com/zeyuyuyu/klavis-tb3-vllm-stream-args
 
 One original Terminal-Bench 3 task, `vllm-stream-args`: vLLM at a pinned
 commit has three streaming tool-call parsers whose streamed `arguments` depend
