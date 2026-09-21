@@ -7,11 +7,12 @@ Hi Xiangkai,
 Here is my submission for the coding test: https://github.com/zeyuyuyu/klavis-tb3-vllm-stream-args
 
 One original Terminal-Bench 3 task, `vllm-stream-args`: vLLM at a pinned
-commit has three streaming tool-call parsers whose streamed `arguments` depend
-on how the decoder chunks the model output; the agent must fix them in place so
-the stream reproduces the non-streaming extractor byte-for-byte for any split,
-while still streaming incrementally and in linear time. It passes all TB3 CI
-checks (22 static checks, rubric review 33/2/0, oracle 85/85, nop 5/85).
+commit has twelve streaming tool-call parsers (twelve wire formats) whose
+streamed `arguments` depend on how the decoder chunks the model output; the
+agent must fix them in place so the stream reproduces each parser's own
+non-streaming extractor byte-for-byte for any split, while still streaming
+incrementally and in linear time. It passes all TB3 CI checks (22 static
+checks, rubric review 33 pass / 2 N/A / 0 fail, oracle 229/229, nop 46/229).
 
 Trial results, using the pair you confirmed (codex + DeepSeek as the
 substitution for claude): codex gpt-5.6-sol (xhigh) failed all three official
