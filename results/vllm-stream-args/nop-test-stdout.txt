@@ -2,12 +2,12 @@
 platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
 rootdir: /tests
 plugins: json-ctrf-0.5.2, anyio-4.15.1
-collected 229 items
+collected 228 items
 
-test_stream.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFF...........F.F....FFFFFFFFFF [ 24%]
+test_stream.py FFFFFFFFFFFFFFFFFFFFFFFFFFFFF...........F.F....FFFFFFFFFF [ 25%]
 FFFFFF...F.F.F.F...FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 56%]
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF..........F.. [ 87%]
-....FF.FFF....FFFFFFFFFFFFFF                                             [100%]
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF..........F.. [ 88%]
+...FF.FFF....FFFFFFFFFFFFFF                                              [100%]
 
 =================================== FAILURES ===================================
 _ test_stream_matches_non_streaming_for_every_split[apertus_arguments_is_a_string] _
@@ -7699,7 +7699,7 @@ kind = 'jamba'
 E       AssertionError: string argument trailed the model output by more than 16 chars (written, delivered) samples: [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0)] ... 584 total
 E       assert not [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0), (22, 0), ...]
 
-test_stream.py:479: AssertionError
+test_stream.py:473: AssertionError
 __ test_json_name_and_string_arguments_stream_as_they_are_written[internlm2] ___
 
 kind = 'internlm2'
@@ -7733,7 +7733,7 @@ kind = 'internlm2'
 E       AssertionError: string argument trailed the model output by more than 16 chars (written, delivered) samples: [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0)] ... 584 total
 E       assert not [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0), (22, 0), ...]
 
-test_stream.py:479: AssertionError
+test_stream.py:473: AssertionError
 ___ test_json_name_and_string_arguments_stream_as_they_are_written[ernie45] ____
 
 kind = 'ernie45'
@@ -7763,7 +7763,7 @@ kind = 'ernie45'
 E       AssertionError: name delivered after 704 characters; it was complete at 34
 E       assert (704 is not None and 704 <= (34 + 2))
 
-test_stream.py:476: AssertionError
+test_stream.py:470: AssertionError
 ___ test_json_name_and_string_arguments_stream_as_they_are_written[hunyuan] ____
 
 kind = 'hunyuan'
@@ -7797,7 +7797,7 @@ kind = 'hunyuan'
 E       AssertionError: string argument trailed the model output by more than 16 chars (written, delivered) samples: [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0)] ... 584 total
 E       assert not [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0), (22, 0), ...]
 
-test_stream.py:479: AssertionError
+test_stream.py:473: AssertionError
 ___ test_json_name_and_string_arguments_stream_as_they_are_written[phi4mini] ___
 
 kind = 'phi4mini'
@@ -7827,7 +7827,7 @@ kind = 'phi4mini'
 E       AssertionError: name delivered after None characters; it was complete at 32
 E       assert (None is not None)
 
-test_stream.py:476: AssertionError
+test_stream.py:470: AssertionError
 _____ test_json_name_and_string_arguments_stream_as_they_are_written[xlam] _____
 
 kind = 'xlam'
@@ -7861,7 +7861,7 @@ kind = 'xlam'
 E       AssertionError: string argument trailed the model output by more than 16 chars (written, delivered) samples: [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0)] ... 584 total
 E       assert not [(17, 0), (18, 0), (19, 0), (20, 0), (21, 0), (22, 0), ...]
 
-test_stream.py:479: AssertionError
+test_stream.py:473: AssertionError
 ______________ test_xml_name_and_parameters_stream_as_they_close _______________
 
     def test_xml_name_and_parameters_stream_as_they_close():
@@ -7891,7 +7891,7 @@ ______________ test_xml_name_and_parameters_stream_as_they_close _______________
 E       AssertionError: name delivered after 213 characters; its tag closed at 41
 E       assert (213 is not None and 213 <= (41 + 2))
 
-test_stream.py:506: AssertionError
+test_stream.py:500: AssertionError
 ___ test_one_character_per_delta_over_a_long_call_finishes_in_time[apertus] ____
 
 kind = 'apertus'
@@ -7931,7 +7931,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1083767.80033908, orig_timeout = 60, stdout_seq = [], stderr_seq = []
+endtime = 1209033.69985197, orig_timeout = 60, stdout_seq = [], stderr_seq = []
 skip_check_and_raise = False
 
     def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
@@ -7960,7 +7960,7 @@ kind = 'apertus'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'apertus'
@@ -8030,7 +8030,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1083829.112661837, orig_timeout = 60, stdout_seq = [], stderr_seq = []
+endtime = 1209095.039802611, orig_timeout = 60, stdout_seq = [], stderr_seq = []
 skip_check_and_raise = False
 
     def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
@@ -8059,7 +8059,7 @@ kind = 'deepseekv3'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'deepseekv3'
@@ -8103,10 +8103,10 @@ kind = 'ernie45'
         assert wall < BIG_BUDGET_SEC, f"{len(text)} characters took {wall:.1f}s (parser loop {r['elapsed']:.1f}s)"
 >       assert r["names"].get("0") == [ns["calls"][0][0]]
 E       AssertionError: assert None == ['book']
-E        +  where None = <built-in method get of dict object at 0x7efd690e6400>('0')
-E        +    where <built-in method get of dict object at 0x7efd690e6400> = {}.get
+E        +  where None = <built-in method get of dict object at 0x7f668dcc9b80>('0')
+E        +    where <built-in method get of dict object at 0x7f668dcc9b80> = {}.get
 
-test_stream.py:535: AssertionError
+test_stream.py:529: AssertionError
 ___ test_one_character_per_delta_over_a_long_call_finishes_in_time[granite] ____
 
 kind = 'granite'
@@ -8146,7 +8146,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1083894.338377801, orig_timeout = 60, stdout_seq = []
+endtime = 1209160.198273999, orig_timeout = 60, stdout_seq = []
 stderr_seq = [b'Error trying to handle streaming tool call: list assignment index out of range\n']
 skip_check_and_raise = False
 
@@ -8176,7 +8176,7 @@ kind = 'granite'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'granite'
@@ -8218,10 +8218,10 @@ kind = 'hermes'
         assert ns["tools_called"]
         (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
 >       assert wall < BIG_BUDGET_SEC, f"{len(text)} characters took {wall:.1f}s (parser loop {r['elapsed']:.1f}s)"
-E       AssertionError: 150077 characters took 56.0s (parser loop 54.9s)
-E       assert 56.03097981377505 < 25.0
+E       AssertionError: 150077 characters took 55.7s (parser loop 54.6s)
+E       assert 55.70230739796534 < 25.0
 
-test_stream.py:534: AssertionError
+test_stream.py:528: AssertionError
 ___ test_one_character_per_delta_over_a_long_call_finishes_in_time[hunyuan] ____
 
 kind = 'hunyuan'
@@ -8261,7 +8261,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1084012.783052299, orig_timeout = 60, stdout_seq = [], stderr_seq = []
+endtime = 1209278.282526548, orig_timeout = 60, stdout_seq = [], stderr_seq = []
 skip_check_and_raise = False
 
     def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
@@ -8290,7 +8290,7 @@ kind = 'hunyuan'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'hunyuan'
@@ -8334,10 +8334,10 @@ kind = 'internlm2'
         assert wall < BIG_BUDGET_SEC, f"{len(text)} characters took {wall:.1f}s (parser loop {r['elapsed']:.1f}s)"
 >       assert r["names"].get("0") == [ns["calls"][0][0]]
 E       AssertionError: assert None == ['book']
-E        +  where None = <built-in method get of dict object at 0x7efd6908a580>('0')
-E        +    where <built-in method get of dict object at 0x7efd6908a580> = {}.get
+E        +  where None = <built-in method get of dict object at 0x7f668e040240>('0')
+E        +    where <built-in method get of dict object at 0x7f668e040240> = {}.get
 
-test_stream.py:535: AssertionError
+test_stream.py:529: AssertionError
 ____ test_one_character_per_delta_over_a_long_call_finishes_in_time[jamba] _____
 
 kind = 'jamba'
@@ -8377,7 +8377,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1084082.035635807, orig_timeout = 60, stdout_seq = [], stderr_seq = []
+endtime = 1209347.550673455, orig_timeout = 60, stdout_seq = [], stderr_seq = []
 skip_check_and_raise = False
 
     def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
@@ -8406,7 +8406,7 @@ kind = 'jamba'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'jamba'
@@ -8476,7 +8476,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1084143.406782604, orig_timeout = 60, stdout_seq = [], stderr_seq = []
+endtime = 1209408.892282187, orig_timeout = 60, stdout_seq = [], stderr_seq = []
 skip_check_and_raise = False
 
     def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
@@ -8505,7 +8505,7 @@ kind = 'llama'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'llama'
@@ -8547,10 +8547,10 @@ kind = 'minicpm5'
         assert ns["tools_called"]
         (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
 >       assert wall < BIG_BUDGET_SEC, f"{len(text)} characters took {wall:.1f}s (parser loop {r['elapsed']:.1f}s)"
-E       AssertionError: 158356 characters took 30.9s (parser loop 29.7s)
-E       assert 30.88725286582485 < 25.0
+E       AssertionError: 158356 characters took 29.4s (parser loop 28.3s)
+E       assert 29.361870410852134 < 25.0
 
-test_stream.py:534: AssertionError
+test_stream.py:528: AssertionError
 ___ test_one_character_per_delta_over_a_long_call_finishes_in_time[phi4mini] ___
 
 kind = 'phi4mini'
@@ -8564,10 +8564,10 @@ kind = 'phi4mini'
         assert wall < BIG_BUDGET_SEC, f"{len(text)} characters took {wall:.1f}s (parser loop {r['elapsed']:.1f}s)"
 >       assert r["names"].get("0") == [ns["calls"][0][0]]
 E       AssertionError: assert None == ['book']
-E        +  where None = <built-in method get of dict object at 0x7efd685ccf00>('0')
-E        +    where <built-in method get of dict object at 0x7efd685ccf00> = {}.get
+E        +  where None = <built-in method get of dict object at 0x7f668d246f00>('0')
+E        +    where <built-in method get of dict object at 0x7f668d246f00> = {}.get
 
-test_stream.py:535: AssertionError
+test_stream.py:529: AssertionError
 _____ test_one_character_per_delta_over_a_long_call_finishes_in_time[xlam] _____
 
 kind = 'xlam'
@@ -8607,7 +8607,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 self = <Popen: returncode: -9 args: ['setpriv', '--reuid=65534', '--regid=65534', '...>
-endtime = 1084240.354209281, orig_timeout = 60, stdout_seq = [], stderr_seq = []
+endtime = 1209503.78289722, orig_timeout = 60, stdout_seq = [], stderr_seq = []
 skip_check_and_raise = False
 
     def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
@@ -8636,7 +8636,7 @@ kind = 'xlam'
 >       (r,), wall = run_worker(kind, [{"op": "perf", "text": text}], timeout=60)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-test_stream.py:533: 
+test_stream.py:527: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 kind = 'xlam'
@@ -8709,7 +8709,6 @@ PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_
 PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call[llama_unparseable_brace_poisons_the_output]
 PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call[minicpm5_unknown_function_stays_content]
 PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call[xlam_text_before_the_array_means_no_call]
-PASSED test_stream.py::test_parsers_are_still_where_vllm_loads_them
 PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[hermes]
 PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[granite]
 PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[apertus]
@@ -8898,4 +8897,4 @@ FAILED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in
 FAILED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[minicpm5]
 FAILED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[phi4mini]
 FAILED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[xlam]
-================= 183 failed, 46 passed in 1028.46s (0:17:08) ==================
+================= 183 failed, 45 passed in 1012.34s (0:16:52) ==================

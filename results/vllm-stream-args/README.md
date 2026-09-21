@@ -9,7 +9,7 @@ summaries and verifier stdout are authoritative.
 | folder / file | what it is |
 |---|---|
 | `oracle-*` | reference solution under the submitted grader (twelve parsers): 228/228, reward 1.0 |
-| `nop-*` | no-op agent under the submitted grader: reward 0.0 (only the plain-text and no-call cases pass) |
+| `nop-*` | no-op agent under the submitted grader: 45/228, reward 0.0 |
 | `rubric-review-verdicts.json` | rubric review verdicts (33 pass / 2 N/A / 0 fail) |
 | `v5-run-codex-trial{1,2,3}` | codex gpt-5.6-sol xhigh on the submitted twelve-parser task: fail (4 cases), fail (4), fail (7) |
 | `v5-run-deepseek-trial{1,2,3}` | DeepSeek v4.1 flash (reasoning max, terminus-2) on the submitted twelve-parser task - the reviewers' permitted substitution for claude: fail (22 cases), fail (181), fail (25) |

@@ -55,7 +55,7 @@ incremental driver for the XML format.
 | 22 static checks (`scripts/checks/`) | all pass — [`results/static-checks.md`](results/static-checks.md) |
 | rubric review (`claude-code` sonnet, `scripts/review/`) | 33 pass / 2 not applicable / 0 fail — [`results/vllm-stream-args/rubric-review-verdicts.json`](results/vllm-stream-args/rubric-review-verdicts.json) |
 | oracle | reward 1.0, 228/228 |
-| nop | reward 0.0 (only the plain-text and no-call cases pass) |
+| nop | reward 0.0, 45/228 |
 | codex gpt-5.6-sol xhigh, 3 trials | **fail, fail, fail** (224/228, 224/228, 221/228) |
 | DeepSeek v4.1 flash (reasoning max), 3 trials — the reviewers' permitted substitution for claude | **fail, fail, fail** (206/228, 47/228, 203/228) |
 | claude-code opus-5 max | three runs on this task, none counted (two rate-limit windows, one gateway spend cap); see the failure analysis |
