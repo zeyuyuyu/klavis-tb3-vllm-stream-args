@@ -2,12 +2,12 @@
 platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
 rootdir: /tests
 plugins: json-ctrf-0.5.2, anyio-4.15.1
-collected 229 items
+collected 228 items
 
-test_stream.py ......................................................... [ 24%]
+test_stream.py ......................................................... [ 25%]
 ........................................................................ [ 56%]
-........................................................................ [ 87%]
-............................                                             [100%]
+........................................................................ [ 88%]
+...........................                                              [100%]
 
 ==================================== PASSES ====================================
 =========================== short test summary info ============================
@@ -215,7 +215,6 @@ PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_
 PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call[llama_unparseable_brace_poisons_the_output]
 PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call[minicpm5_unknown_function_stays_content]
 PASSED test_stream.py::test_outputs_the_non_streaming_extractor_rejects_produce_no_tool_call[xlam_text_before_the_array_means_no_call]
-PASSED test_stream.py::test_parsers_are_still_where_vllm_loads_them
 PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[jamba]
 PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[internlm2]
 PASSED test_stream.py::test_json_name_and_string_arguments_stream_as_they_are_written[hermes]
@@ -240,5 +239,5 @@ PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in
 PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[minicpm5]
 PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[phi4mini]
 PASSED test_stream.py::test_one_character_per_delta_over_a_long_call_finishes_in_time[xlam]
-======================= 229 passed in 565.85s (0:09:25) ========================
-ctrf summary: {'tests': 229, 'passed': 229, 'failed': 0, 'skipped': 0, 'pending': 0, 'other': 0, 'start': 1789866167613, 'stop': 1789866733432} ok
+======================= 228 passed in 555.19s (0:09:15) ========================
+ctrf summary: {'tests': 228, 'passed': 228, 'failed': 0, 'skipped': 0, 'pending': 0, 'other': 0, 'start': 1789991448582, 'stop': 1789992003739} ok

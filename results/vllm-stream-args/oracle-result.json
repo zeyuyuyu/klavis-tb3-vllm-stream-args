@@ -1,13 +1,13 @@
 {
-    "id": "ce71688d-454e-4d33-9596-6786fdd60dcd",
+    "id": "8829a5fd-a1ae-4494-b295-9f5f88a6b28b",
     "task_name": "terminal-bench/vllm-stream-args",
-    "trial_name": "vllm-stream-args__CfBgh3z",
-    "trial_uri": "file:///home/zeyu/klavis-tb3/tb3/jobs/vsa6-oracle/vllm-stream-args__CfBgh3z",
+    "trial_name": "vllm-stream-args__emx4ukU",
+    "trial_uri": "file:///home/zeyu/klavis-tb3/tb3/jobs/vsa-final-oracle/vllm-stream-args__emx4ukU",
     "task_id": {
         "path": "tasks/vllm-stream-args"
     },
     "source": null,
-    "task_checksum": "d031d702e8e4bad8c5be4b66fb96a016a10b5cf5a4894c2b11c3d48f73bbd735",
+    "task_checksum": "7dd31ded6f3e186a15bb92038747b6ef94e95b91d95843a6edc612a2ce95c896",
     "config": {
         "task": {
             "path": "tasks/vllm-stream-args",
@@ -19,8 +19,8 @@
             "download_dir": null,
             "source": null
         },
-        "trial_name": "vllm-stream-args__CfBgh3z",
-        "trials_dir": "jobs/vsa6-oracle",
+        "trial_name": "vllm-stream-args__emx4ukU",
+        "trials_dir": "jobs/vsa-final-oracle",
         "install_only": false,
         "timeout_multiplier": 1.0,
         "agent_timeout_multiplier": null,
@@ -69,7 +69,7 @@
         "artifacts": [],
         "extra_instruction_paths": [],
         "extra_instructions": [],
-        "job_id": "69382c2a-1961-4b21-b1cc-34a3f2381963",
+        "job_id": "75a6e996-74e2-4df5-b6f6-a441e28eabdd",
         "source_trial": null
     },
     "agent_info": {
@@ -93,23 +93,23 @@
     },
     "verifier_environment_mode": "separate",
     "exception_info": null,
-    "started_at": "2026-09-20T01:02:26.641307Z",
-    "finished_at": "2026-09-20T01:12:24.751472Z",
+    "started_at": "2026-09-21T11:50:27.738622Z",
+    "finished_at": "2026-09-21T12:00:15.125020Z",
     "environment_setup": {
-        "started_at": "2026-09-20T01:02:26.671997Z",
-        "finished_at": "2026-09-20T01:02:28.187353Z"
+        "started_at": "2026-09-21T11:50:27.769023Z",
+        "finished_at": "2026-09-21T11:50:29.140317Z"
     },
     "agent_setup": {
-        "started_at": "2026-09-20T01:02:28.187431Z",
-        "finished_at": "2026-09-20T01:02:28.187540Z"
+        "started_at": "2026-09-21T11:50:29.140393Z",
+        "finished_at": "2026-09-21T11:50:29.140481Z"
     },
     "agent_execution": {
-        "started_at": "2026-09-20T01:02:28.187659Z",
-        "finished_at": "2026-09-20T01:02:30.076928Z"
+        "started_at": "2026-09-21T11:50:29.140593Z",
+        "finished_at": "2026-09-21T11:50:32.869956Z"
     },
     "verifier": {
-        "started_at": "2026-09-20T01:02:42.291915Z",
-        "finished_at": "2026-09-20T01:12:24.751449Z"
+        "started_at": "2026-09-21T11:50:44.793167Z",
+        "finished_at": "2026-09-21T12:00:15.124999Z"
     },
     "step_results": null
 }

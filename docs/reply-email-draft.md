@@ -12,7 +12,7 @@ streamed `arguments` depend on how the decoder chunks the model output; the
 agent must fix them in place so the stream reproduces each parser's own
 non-streaming extractor byte-for-byte for any split, while still streaming
 incrementally and in linear time. It passes all TB3 CI checks (22 static
-checks, rubric review 33 pass / 2 N/A / 0 fail, oracle 229/229, nop 46/229).
+checks, rubric review 33 pass / 2 N/A / 0 fail, oracle 228/228, nop reward 0).
 
 Trial results, using the pair you confirmed (codex + DeepSeek as the
 substitution for claude): codex gpt-5.6-sol (xhigh) failed all three official
