@@ -28,9 +28,9 @@ they are the record of how it got there.
 | `vsa-run-codex-v5` (`q8AYSwb`) | 1 | codex gpt-5.6-sol xhigh | **fail** | 4 of 228 cases failed: hunyuan/xLAM skipped-entry rule, MiniCPM typed values with whitespace, xLAM text-before-array |
 | `vsa-run-codex-v5` (`EnAhJqw`) | 2 | codex | **fail** | 4 of 228: ERNIE `{}` default, hunyuan/xLAM skipped-entry rule, xLAM text-before-array |
 | `vsa-run-codex-v5-r1` (`JKYEHfi`) | 3 | codex | **fail** | 7 of 228: hunyuan/xLAM skipped-entry rule, string-lag latency bound on five JSON formats |
-| `vsa-run-deepseek-v5` | 1 | DeepSeek v4.1 flash, reasoning max (terminus-2) | DS5_T1 | DS5_V1 |
-| `vsa-run-deepseek-v5` | 2 | DeepSeek v4.1 flash | DS5_T2 | DS5_V2 |
-| `vsa-run-deepseek-v5` | 3 | DeepSeek v4.1 flash | DS5_T3 | DS5_V3 |
+| `vsa-run-deepseek-v5b` (`YdDhonS`) | 1 | DeepSeek v4.1 flash, reasoning max (terminus-2) | **fail** | 22 of 228: `null` arguments in eight formats, skipped-entry rule (Hunyuan, xLAM), second block (Jamba, Hunyuan), ERNIE `{}` default, four no-call rules, MiniCPM glyphs / single-quoted attributes / two calls |
+| `vsa-run-deepseek-v5b` | 2 | DeepSeek v4.1 flash | DS5_T2 | DS5_V2 |
+| `vsa-run-deepseek-v5b` | 3 | DeepSeek v4.1 flash | DS5_T3 | DS5_V3 |
 
 Each codex run was a complete attempt: 2h37m-3h13m of wall clock, 78-125
 commands, a shared incremental JSON scanner written from scratch, all twelve
