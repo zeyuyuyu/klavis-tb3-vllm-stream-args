@@ -204,6 +204,11 @@ rebuilt verifier (agent code only in a privilege-dropped worker, all judgement
 in the trusted process, `passed == collected` gate) is the part of this
 submission I would most want copied.
 
+(On whether the twelve-parser version is "just more of the same": see the
+section of that name in `docs/design-study.md` - the misses are concentrated
+on rules that exist only in the extractors, and the agents finished with time
+to spare.)
+
 If I were to keep going, I would not add a tenth shape. I would move the
 difficulty out of the engineering and into a domain where the oracle is not
 readable from the repository - the pattern the merged tasks that do defeat

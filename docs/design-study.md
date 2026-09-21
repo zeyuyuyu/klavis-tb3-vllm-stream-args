@@ -148,6 +148,54 @@ per run - three heads and three tails in six official trials on three
 parsers. v5 makes it flip the coin twelve times: the same models, given twelve
 oracles to read, missed at least one rule in every one of the codex trials.
 
+## Is the twelve-parser version just "more of the same"?
+
+That is the right question to ask of v5, and the trial records answer it.
+
+**The failures are not spread like noise; they are concentrated on one kind of
+fact.** Six official trials, six different rewrites, and the cases they missed
+are almost all rules that exist only in a parser's non-streaming extractor:
+Hunyuan and xLAM drop a call object that has no `"arguments"` and renumber the
+rest (missed in every codex run and two DeepSeek runs); xLAM and Granite treat
+text before the array as "no tool call"; ERNIE turns a missing `"arguments"`
+into `{}`; eight formats' extractors serialise a `null` argument as `null`
+while an implementation that "knows" arguments are objects drops it; MiniCPM
+normalises tokenizer glyphs and accepts single-quoted attributes. None of these
+is a corner of JSON or of streaming; each is a decision some vLLM contributor
+made in one file, and the only way to get it is to read that file and mirror
+it. A task with one such file was solved about half the time. A task with
+twelve of them was solved zero times in six, and the misses were the files.
+
+**The agents did not run out of time or budget; they ran out of reading.**
+Every counted run finished well inside the eight-hour budget (2.3 to 3.2
+hours), produced a complete twelve-parser implementation with a shared
+incremental scanner, wrote its own chunk-invariance tests, and ended by
+declaring success. What the runs did not do was open each extractor and
+enumerate its rules; they generalised from the formats they had read to the
+ones they had not, which is exactly the move that produces a confident wrong
+answer. That is a different failure from "too much to do", and it is the
+failure the brief asks for: a genuine one.
+
+**The breadth is the job, not padding.** An inference platform that exposes
+one OpenAI-compatible endpoint for a dozen model families has to keep a dozen
+tool-call dialects consistent between its streaming and non-streaming paths;
+that is what the vLLM maintainers actually do, one parser at a time, and it is
+what an engineer inheriting this bug report would have to do. The contract is
+a single specification applied twelve times, and every case in the grader is
+derived from behaviour the pinned tree already exhibits - nothing was invented
+to be obscure. If anything the version with three parsers was the artificial
+one: it happened to pick three files whose rules a careful reader could hold
+in mind at once.
+
+**Why this is a general design lesson rather than a trick.** The tasks in
+this repository that defeat these models share a shape with v5: many
+independent facts that must be *read* from the environment rather than
+*inferred* from a specification - specialist domains where the oracle is the
+domain itself. v5 reproduces that shape inside software engineering by making
+the oracle twelve pieces of existing code with independent quirks. The
+per-file chance of a missed rule is modest; across twelve files it compounds,
+and the compounding, not any single file, is what the trials measured.
+
 ## What I would do next
 
 - **Build for step count.** A task needing a sustained measure-adjust-re-run
