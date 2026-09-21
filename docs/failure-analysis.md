@@ -29,7 +29,7 @@ they are the record of how it got there.
 | `vsa-run-codex-v5` (`EnAhJqw`) | 2 | codex | **fail** | 4 of 228: ERNIE `{}` default, hunyuan/xLAM skipped-entry rule, xLAM text-before-array |
 | `vsa-run-codex-v5-r1` (`JKYEHfi`) | 3 | codex | **fail** | 7 of 228: hunyuan/xLAM skipped-entry rule, string-lag latency bound on five JSON formats |
 | `vsa-run-deepseek-v5b` (`YdDhonS`) | 1 | DeepSeek v4.1 flash, reasoning max (terminus-2) | **fail** | 22 of 228: `null` arguments in eight formats, skipped-entry rule (Hunyuan, xLAM), second block (Jamba, Hunyuan), ERNIE `{}` default, four no-call rules, MiniCPM glyphs / single-quoted attributes / two calls |
-| `vsa-run-deepseek-v5b` | 2 | DeepSeek v4.1 flash | DS5_T2 | DS5_V2 |
+| `vsa-run-deepseek-v5b` (`BYH63hx`) | 2 | DeepSeek v4.1 flash | **fail** | 181 of 228: rewrote eleven parsers and a shared helper without being able to execute them (`torch` absent; it settled for `py_compile` and `git diff --check`), declared the work ready, and the rewritten parsers emit no tool calls at all |
 | `vsa-run-deepseek-v5b` | 3 | DeepSeek v4.1 flash | DS5_T3 | DS5_V3 |
 
 Each codex run was a complete attempt: 2h37m-3h13m of wall clock, 78-125
