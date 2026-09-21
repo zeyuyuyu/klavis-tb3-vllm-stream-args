@@ -30,7 +30,7 @@ they are the record of how it got there.
 | `vsa-run-codex-v5-r1` (`JKYEHfi`) | 3 | codex | **fail** | 7 of 228: hunyuan/xLAM skipped-entry rule, string-lag latency bound on five JSON formats |
 | `vsa-run-deepseek-v5b` (`YdDhonS`) | 1 | DeepSeek v4.1 flash, reasoning max (terminus-2) | **fail** | 22 of 228: `null` arguments in eight formats, skipped-entry rule (Hunyuan, xLAM), second block (Jamba, Hunyuan), ERNIE `{}` default, four no-call rules, MiniCPM glyphs / single-quoted attributes / two calls |
 | `vsa-run-deepseek-v5b` (`BYH63hx`) | 2 | DeepSeek v4.1 flash | **fail** | 181 of 228: rewrote eleven parsers and a shared helper without being able to execute them (`torch` absent; it settled for `py_compile` and `git diff --check`), declared the work ready, and the rewritten parsers emit no tool calls at all |
-| `vsa-run-deepseek-v5b` | 3 | DeepSeek v4.1 flash | DS5_T3 | DS5_V3 |
+| `vsa-run-deepseek-v5b` (`GpqYovx`) | 3 | DeepSeek v4.1 flash | **fail** | 25 of 228 across eleven formats (MiniCPM heaviest: glyphs, quoting, multi-call, typed values; Granite no-call rule; skipped entries; `null` and string arguments) |
 
 Each codex run was a complete attempt: 2h37m-3h13m of wall clock, 78-125
 commands, a shared incremental JSON scanner written from scratch, all twelve
@@ -55,7 +55,23 @@ Anthropic-compatible gateway died at 4h05 when the key's spend cap was
 reached (its partial state graded 206/228, xLAM untouched). All three are
 under `results/vllm-stream-args/infra-failures/`. The claude results that do
 exist are on the three-parser version below (solved, solved, fail).
-DS5_SUMMARY
+
+
+**DeepSeek's three runs** took 2h20m-3h07m and 446-517 tool calls each; two
+delivered complete twelve-parser rewrites that miss the same oracle-rule family
+codex missed (with `null` arguments and the no-call rules added), and one
+never managed to execute its rewrite (the environment has no torch, so it
+settled for `py_compile`) and shipped parsers that emit nothing. All three
+ended with the agent declaring the work complete. Two earlier DeepSeek runs
+died to the gateway key's spend cap (`RateLimitError`, filed under
+`infra-failures/`) and one job was misconfigured on my side (the API key was
+not in the harness environment; those directories were discarded, no model
+ever ran).
+
+**Result against the brief: codex 3/3 genuine failures, DeepSeek 3/3 genuine
+failures, every `/cheat` at 0.0.** Every counted failure is an agent that
+finished, declared success, and was graded; none is a timeout, crash, rate
+limit or container error.
 
 ### Earlier versions (three parsers)
 
@@ -82,7 +98,7 @@ hours on twelve; each job's `result.json` and CTRF report is in
 in copied logs with `[REDACTED]`; the CTRF summaries and verifier stdout are
 authoritative).
 
-## What codex got wrong, precisely
+## What the agents got wrong, precisely
 
 v3 trial 1 (`gZbMEfL`) is the most informative failure. The agent produced an append-only
 canonical scanner that passes 65 of 72 cases - every delivery schedule, the

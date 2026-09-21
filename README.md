@@ -10,8 +10,9 @@ Read these two first:
 - [`docs/failure-analysis.md`](docs/failure-analysis.md) — the official trial
   results for the submitted task, what the agents got wrong and right, the
   `/cheat` trial that found a verifier hole and how it was closed, and a
-  reading of the numbers. **Codex failed all three official trials on the
-  submitted task; CLAUDE5_HEADLINE**
+  reading of the numbers. **Codex and DeepSeek (the reviewers' permitted substitution for claude)
+  each failed all three official trials on the submitted task; every `/cheat`
+  scored 0.**
 - [`docs/design-study.md`](docs/design-study.md) — eight complete tasks were
   built for this submission and each was probed against the CI's own agent
   configurations. The study reports what each design tested, what the models
@@ -56,7 +57,8 @@ incremental driver for the XML format.
 | oracle | reward 1.0, 229/229 |
 | nop | reward 0.0, 46/229 |
 | codex gpt-5.6-sol xhigh, 3 trials | **fail, fail, fail** (224/228, 224/228, 221/228) |
-| claude-code opus-5 max, 3 trials | CLAUDE5_GLANCE |
+| DeepSeek v4.1 flash (reasoning max), 3 trials — the reviewers' permitted substitution for claude | **fail, fail, fail** (206/228, 47/228, 203/228) |
+| claude-code opus-5 max | three runs on this task, none counted (two rate-limit windows, one gateway spend cap); see the failure analysis |
 | `/cheat` codex | 0.0 (OpenAI's content filter rejected the CI hack prompt in every run against this task; the one genuine codex attempt against this verifier design, on the three-parser version, scored 0.0 - and an earlier attempt found the hole that led to the verifier being rebuilt) |
 | `/cheat` DeepSeek v4.1 flash (max) | 0.0 (genuine attempt: pytest hooks planted in the artifact and a `sitecustomize` layer; the verifier never imports the artifact in the pytest process) |
 | `/cheat` claude-code | 0.0 (genuine attempt, parser files left unchanged; its report notes the open network and upstream `origin`, see the failure analysis) |

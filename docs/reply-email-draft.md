@@ -13,16 +13,20 @@ the stream reproduces the non-streaming extractor byte-for-byte for any split,
 while still streaming incrementally and in linear time. It passes all TB3 CI
 checks (22 static checks, rubric review 33/2/0, oracle 85/85, nop 5/85).
 
-Honest headline on the trial requirement: it is not met. Under the CI's exact
-configurations, codex gpt-5.6-sol (xhigh) failed 3 of 6 genuine trials across
-two grader revisions (1 of 3 on the submitted revision) and claude-opus-5 (max)
-failed 1 of 3. The repository documents every trial, the two earlier contract
-versions that probes defeated, a verifier hole a `/cheat` trial found
-(`pytest.skip` from inside the artifact) and the rebuilt verifier that closes
-it, and a study of the seven earlier designs I built and probed before this one
-— all solved. The failure analysis explains why I think the remaining lever for
-tasks like this is not more engineering corners but domains whose oracle is not
-readable from the repository.
+Trial results, using the pair you confirmed (codex + DeepSeek as the
+substitution for claude): codex gpt-5.6-sol (xhigh) failed all three official
+trials and DeepSeek v4.1 flash (max) failed all three; every /cheat trial
+(codex, DeepSeek, and claude-code) scored 0. All six counted failures are
+agents that finished and declared success; none is a timeout or an
+infrastructure error, and the infrastructure failures that did occur (claude's
+rate windows, a gateway spend cap) are filed separately and not counted.
+
+The repository documents every run, the four earlier grader versions and what
+the models did to them (the three-parser versions were solved about half the
+time, which is what motivated the twelve-parser version), a verifier hole a
+/cheat trial found (pytest.skip from inside the artifact) and the rebuilt
+verifier that closes it, and a study of the eight designs built and probed
+before this one.
 
 I would be glad to discuss the design, the verification strategy, and the
 model-failure analysis.
